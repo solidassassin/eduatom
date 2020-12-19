@@ -242,6 +242,13 @@ const Blog: React.FC<Props> = (props) => {
             </li>
           </ul>
         </nav>
+        <div className="container-main">
+          <div className="container-post">
+            <h1 className="title-post">testas</h1>
+
+            <p className="text-post"></p>
+          </div>
+        </div>
       </div>
       <style jsx>{``}</style>
     </Layout>

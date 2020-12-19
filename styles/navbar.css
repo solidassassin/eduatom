@@ -10,6 +10,7 @@
 h1 {
   font-size: 16px;
 }
+
 body {
   color: black;
   background-color: white;
@@ -33,7 +34,27 @@ main {
   margin-left: 5rem;
   padding: 1rem;
 }
-
+.page {
+  flex-direction: row;
+  margin-left: auto;
+  width: 100%;
+  height: auto;
+}
+.container-main {
+  margin-left: 5rem;
+  border-width: 3px;
+  border-color: black;
+  height: 100%;
+}
+.container-post {
+  flex-direction: column;
+  border-width: 3px;
+}
+.title-post {
+  font-size: 42px;
+}
+.text-post {
+}
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -138,7 +159,11 @@ main {
     width: 100vw;
     height: 5rem;
   }
-
+  .container-main {
+    margin-left: 1rem;
+    height: auto;
+    margin-bottom: 5rem;
+  }
   .logo {
     display: none;
   }
