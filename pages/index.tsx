@@ -15,35 +15,13 @@ const Blog : React.FC<Props> = props => {
     <ul className="navbar-nav">
       <li className="logo">
         <a href="#" className="nav-link">
-          <span className="link-text logo-text">Fireship</span>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fad"
-            data-icon="angle-double-right"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            className="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
-          >
-            <g className="fa-group">
-              <path
-                fill="currentColor"
-                d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-                className="fa-secondary"
-              ></path>
-              <path
-                fill="currentColor"
-                d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-                className="fa-primary"
-              ></path>
-            </g>
-          </svg>
+          <span className="link-text logo-text">Eduatom</span>
+
         </a>
       </li>
 
       <li className="nav-item">
-        <a href="#" className="nav-link">
+        <a href="/signup" className="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -67,7 +45,7 @@ const Blog : React.FC<Props> = props => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Cats</span>
+          <span className="link-text">Naujienos</span>
         </a>
       </li>
 
@@ -96,7 +74,7 @@ const Blog : React.FC<Props> = props => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Aliens</span>
+          <span className="link-text">Apie Projekta</span>
         </a>
       </li>
 
@@ -125,7 +103,7 @@ const Blog : React.FC<Props> = props => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Space</span>
+          <span className="link-text">Tyrėjų Komanda</span>
         </a>
       </li>
 
@@ -154,12 +132,41 @@ const Blog : React.FC<Props> = props => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Shuttle</span>
+          <span className="link-text">Projekto Rezultatai</span>
+        </a>
+      </li>
+
+      <li className="nav-item">
+        <a href="#" className="nav-link">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fad"
+            data-icon="space-shuttle"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512"
+            className="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x"
+          >
+            <g className="fa-group">
+              <path
+                fill="currentColor"
+                d="m61 301c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45c0-1.881-.13-3.731-.355-5.552l76.383-38.192c10.791 13.728 26.247 23.622 43.971 27.235v95.089c-17.459 6.192-30 22.865-30 42.42 0 24.813 20.187 45 45 45s45-20.187 45-45c0-19.555-12.541-36.228-30-42.42v-95.089c17.724-3.612 33.18-13.507 43.971-27.235l76.384 38.192c-.224 1.821-.354 3.671-.354 5.552 0 24.813 20.187 45 45 45s45-20.187 45-45-20.187-45-45-45c-12.11 0-23.11 4.817-31.208 12.626l-76.363-38.182c1.668-6.205 2.571-12.72 2.571-19.444 0-13.21-3.446-25.625-9.466-36.416l122.033-104.6c6.609 3.819 14.267 6.016 22.433 6.016 24.813 0 45-20.187 45-45s-20.187-45-45-45-45 20.187-45 45c0 5.716 1.082 11.18 3.034 16.214l-122.041 104.608c-12.712-9.902-28.669-15.822-45.993-15.822-13.193 0-25.593 3.436-36.375 9.442l-104.663-122.969c3.832-6.619 6.038-14.291 6.038-22.473 0-24.813-20.187-45-45-45s-45 20.187-45 45 20.187 45 45 45c5.699 0 11.149-1.076 16.172-3.018l104.679 122.988c-9.919 12.718-15.851 28.689-15.851 46.03 0 6.724.903 13.239 2.571 19.444l-76.363 38.182c-8.098-7.809-19.098-12.626-31.208-12.626zm0 60c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm360-30c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15zm30-270c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15zm-210 421c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm0-271c24.813 0 45 20.187 45 45s-20.187 45-45 45-45-20.187-45-45 20.187-45 45-45zm-180-151c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15z"
+                className="fa-secondary"
+              ></path>
+              <path
+                fill="currentColor"
+                d="m61 301c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45c0-1.881-.13-3.731-.355-5.552l76.383-38.192c10.791 13.728 26.247 23.622 43.971 27.235v95.089c-17.459 6.192-30 22.865-30 42.42 0 24.813 20.187 45 45 45s45-20.187 45-45c0-19.555-12.541-36.228-30-42.42v-95.089c17.724-3.612 33.18-13.507 43.971-27.235l76.384 38.192c-.224 1.821-.354 3.671-.354 5.552 0 24.813 20.187 45 45 45s45-20.187 45-45-20.187-45-45-45c-12.11 0-23.11 4.817-31.208 12.626l-76.363-38.182c1.668-6.205 2.571-12.72 2.571-19.444 0-13.21-3.446-25.625-9.466-36.416l122.033-104.6c6.609 3.819 14.267 6.016 22.433 6.016 24.813 0 45-20.187 45-45s-20.187-45-45-45-45 20.187-45 45c0 5.716 1.082 11.18 3.034 16.214l-122.041 104.608c-12.712-9.902-28.669-15.822-45.993-15.822-13.193 0-25.593 3.436-36.375 9.442l-104.663-122.969c3.832-6.619 6.038-14.291 6.038-22.473 0-24.813-20.187-45-45-45s-45 20.187-45 45 20.187 45 45 45c5.699 0 11.149-1.076 16.172-3.018l104.679 122.988c-9.919 12.718-15.851 28.689-15.851 46.03 0 6.724.903 13.239 2.571 19.444l-76.363 38.182c-8.098-7.809-19.098-12.626-31.208-12.626zm0 60c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm360-30c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15zm30-270c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15zm-210 421c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zm0-271c24.813 0 45 20.187 45 45s-20.187 45-45 45-45-20.187-45-45 20.187-45 45-45zm-180-151c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15z"
+                className="fa-primary"
+              ></path>
+            </g>
+          </svg>
+          <span className="link-text">Kontaktai</span>
         </a>
       </li>
 
       <li className="nav-item" id="themeButton">
-        <a href="#" className="nav-link">
+        <a href="index" className="nav-link">
           <svg
             className="theme-icon svg-inline--fa fa-moon-stars fa-w-16 fa-7x"
             id="lightIcon"
@@ -235,9 +242,12 @@ const Blog : React.FC<Props> = props => {
               ></path>
             </g>
           </svg>
-          <span className="link-text">Themify</span>
+          <span className="link-text-lang">EN</span>
+         
         </a>
       </li>
+
+
     </ul>
   </nav>
 
