@@ -1,11 +1,11 @@
 :root {
   font-size: 16px;
-  font-family: "Open Sans";
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --transition-speed: 600ms;
+  font-family:"Segoe UI";
+  --text-primary: black;
+  --text-secondary: black;
+  --bg-primary: white;
+  --bg-secondary: #bcbcbc;
+  --transition-speed: 500ms;
 }
 h1 {
   font-size: 16px;
@@ -53,8 +53,7 @@ main {
 .title-post {
   font-size: 42px;
 }
-.text-post {
-}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -112,11 +111,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: black;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: black;
 }
 
 .fa-primary,
@@ -124,20 +123,23 @@ main {
   transition: var(--transition-speed);
 }
 
+@font-face {
+  font-family: Azonix;
+  src: url("../fonts/Azonix.otf") format("opentype");
+}
+
 .logo {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
+  font-family: "Azonix";
 }
 
 .logo svg {
-  transform: rotate(0deg);
   transition: var(--transition-speed);
 }
 
@@ -149,7 +151,7 @@ main {
 }
 
 .navbar:hover .logo svg {
-  transform: rotate(-180deg);
+  opacity: 0;
 }
 
 /* Small screens */
@@ -195,6 +197,8 @@ main {
 
   .navbar:hover .link-text {
     display: inline;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   .navbar:hover .logo svg {
