@@ -8,12 +8,8 @@
   --transition-speed: 500ms;
 
 }
-.carusel{
-  
-}
-.imageSlide{
 
-}
+
 @font-face {
   font-family: "Big John PRO Regular";
   src: url("../fonts/BigJohnPRORegular.otf") format("opentype");
@@ -30,7 +26,7 @@ h1 {
 
 body {
   color: black;
-  background-color: black;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -38,6 +34,9 @@ body {
 main {
   margin-left: 5rem;
   padding: 1rem;
+}
+.centerImg{
+  text-align: center;
 }
 .page {
   flex-direction: row;
