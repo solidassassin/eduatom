@@ -141,6 +141,7 @@ main {
     bottom: 0;
     width: 100vw;
     height: 5rem;
+    overflow: scroll;
   }
   .container-main {
     margin-left: 1rem;
@@ -174,6 +175,7 @@ main {
 
   .navbar:hover {
     width: 16rem;
+    overflow: scroll;
   }
 
   .navbar:hover .link-text {
