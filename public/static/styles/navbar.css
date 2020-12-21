@@ -141,8 +141,18 @@ main {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
+
+  .navbar::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  .navbar::-webkit-scrollbar-thumb {
+    background: #bcbcbc;
+  }
+
   .container-main {
     margin-left: 1rem;
     height: auto;
@@ -176,6 +186,14 @@ main {
   .navbar:hover {
     width: 16rem;
     overflow: scroll;
+  }
+
+  .navbar:hover::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .navbar:hover::-webkit-scrollbar-thumb {
+    background: #bcbcbc;
   }
 
   .navbar:hover .link-text {
