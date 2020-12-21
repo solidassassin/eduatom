@@ -19,7 +19,6 @@ export default function Blog(props: React.FC<Props>) {
           </div>
         </div>
       </div>
-      <style jsx>{``}</style>
     </Layout>
   );
 }
@@ -31,5 +30,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: { feed },
   };
 };
-
-//export default Blog;
