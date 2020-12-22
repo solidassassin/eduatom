@@ -6,7 +6,9 @@
   --bg-primary: white;
   --bg-secondary: #bcbcbc;
   --transition-speed: 500ms;
+
 }
+
 
 @font-face {
   font-family: "Big John PRO Regular";
@@ -32,6 +34,9 @@ body {
 main {
   margin-left: 5rem;
   padding: 1rem;
+}
+.centerImg{
+  text-align: center;
 }
 .page {
   flex-direction: row;
