@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -9,7 +11,6 @@ export default function Navbar() {
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
-              data-icon="angle-double-right"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -24,12 +25,11 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="/signup" className="nav-link">
+          <a href="#news" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
-              data-icon="cat"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -49,12 +49,11 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="#project" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
-              data-icon="alien-monster"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
@@ -71,12 +70,11 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="#team" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
-              data-icon="space-station-moon-alt"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -96,12 +94,11 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="#results" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
-              data-icon="space-shuttle"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
@@ -119,7 +116,7 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <a href="#contact" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -140,8 +137,8 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <a href="index" className="nav-link">
-            <span className="link-text">‎‎‎‎‎English</span>
+          <a href="/en" className="nav-link">
+            <span className="link-text">English</span>
           </a>
         </li>
       </ul>
