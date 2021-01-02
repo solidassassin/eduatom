@@ -95,22 +95,25 @@ h2 {
   font-family: "Big John PRO Regular";
   font-weight: bolder;
 }
+
 .parent {
-  justify-content: center;
-}
-.comp-name {
   position: relative;
-  margin-left: auto;
-  margin-top: auto;
+}
+
+.comp-name {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
   font-size: 10vw;
   font-family: "Headache";
   color: white;
 }
 
 .column {
-  float: left;
+  display: inline-block;
   width: 30%;
-  padding: 10px;
+  padding-right: 2rem;
 }
 
 .row {
@@ -140,10 +143,6 @@ h2 {
 
 .nav-item {
   width: 100%;
-}
-
-.nav-item:last-child {
-  margin-top: auto;
 }
 
 .nav-link {

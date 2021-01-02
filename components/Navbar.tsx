@@ -136,11 +136,6 @@ export default function Navbar() {
           </a>
         </li>
 
-        <li className="nav-item">
-          <a href="/en" className="nav-link">
-            <span className="link-text">English</span>
-          </a>
-        </li>
       </ul>
     </nav>
   );

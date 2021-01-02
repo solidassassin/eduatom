@@ -1,15 +1,19 @@
-import React from "react";
-import { GetServerSideProps } from "next";
-import Post, { PostProps } from "../components/Post";
+import fs from "fs";
+import path from "path";
 import Navbar from "../components/Navbar";
 import { CarouselProvider, Slider, Slide, Image } from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
 
-type Props = {
-  feed: PostProps[];
+type StaticFile = {
+  fileName: string;
+  filePath: string;
 };
 
-export default function MainPage(props: React.FC<Props>) {
+type Props = {
+  material: StaticFile[];
+  carousel: StaticFile[];
+};
+
+export default function MainPage(props: Props) {
   return (
     <div>
       <div className="page">
@@ -22,27 +26,17 @@ export default function MainPage(props: React.FC<Props>) {
           isPlaying={true}
         >
           <Slider>
-            <Slide index={0}>
-              <Image
-                hasMasterSpinner={false}
-                isBgImage={true}
-                src="/static/images/light1.jpg"
-              ></Image>
-            </Slide>
-            <Slide index={1}>
-              <Image
-                hasMasterSpinner={false}
-                isBgImage={true}
-                src="https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_1280.jpg"
-              ></Image>
-            </Slide>
-            <Slide index={2}>
-              <Image
-                hasMasterSpinner={false}
-                isBgImage={true}
-                src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297_1280.jpg"
-              ></Image>
-            </Slide>
+            {Array.from(props.carousel.entries()).map((value) => {
+              return (
+                <Slide index={value[0]}>
+                  <Image
+                    hasMasterSpinner={false}
+                    isBgImage={true}
+                    src={value[1].filePath}
+                  ></Image>
+                </Slide>
+              );
+            })}
           </Slider>
           <div className="comp-name">Eduatom</div>
         </CarouselProvider>
@@ -102,15 +96,15 @@ export default function MainPage(props: React.FC<Props>) {
             <div className="row">
               <div className="column">
                 <h2>Saulius Mickevičius</h2>
-                <img src="/static/images/sm.jpg"></img>
+                <img src="/static/images/team/sm.jpg"></img>
               </div>
               <div className="column">
                 <h2>Ilona Tandzelgoskienė</h2>
-                <img src="/static/images/it.jpg"></img>
+                <img src="/static/images/team/it.jpg"></img>
               </div>
               <div className="column">
                 <h2>Linara Dovydaitytė</h2>
-                <img src="/static/images/ld.jpg"></img>
+                <img src="/static/images/team/ld.jpg"></img>
               </div>
             </div>
           </div>
@@ -118,14 +112,15 @@ export default function MainPage(props: React.FC<Props>) {
             <h1>Rezultatai</h1>
             <h2>Mokslo publikacijos</h2>
             <ul id="members">
-              <li>
-                <a className="person-name" href="/static/images/light1.jpg">
-                  Test
-                </a>
-              </li>
-              <li>
-                <a href="/static/images/light1.jpg">Test</a>
-              </li>
+              {props.material.map((file) => {
+                return (
+                  <li>
+                    <a className="person-name" href={file.filePath}>
+                      {file.fileName}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="section" id="contact">
@@ -139,10 +134,29 @@ export default function MainPage(props: React.FC<Props>) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/feed");
-  const feed = await res.json();
+function getPath(...folder: string[]) {
+  return path.join(process.cwd(), "public", "static", ...folder);
+}
+
+function getFiles(...folder: string[]) {
+  return fs.readdirSync(getPath(...folder)).map((file: string) => {
+    const filePath = path.join("static", ...folder, file);
+    const fileName = file.replace(/-/g, " ").replace(/\.\w*$/, "");
+    return {
+      fileName,
+      filePath,
+    };
+  });
+}
+
+export async function getStaticProps() {
+  const material = getFiles("material");
+  const carousel = getFiles("images", "carousel");
+
   return {
-    props: { feed },
+    props: {
+      material,
+      carousel,
+    },
   };
-};
+}
