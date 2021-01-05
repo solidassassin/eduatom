@@ -1,43 +1,31 @@
-import NextAuth from 'next-auth'
-import Providers from 'next-auth/providers'
-import { env } from 'process'
+import { env } from "process";
+import NextAuth from "next-auth";
+import Providers from "next-auth/providers";
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { User } from "next-auth";
+import type { Profile } from "next-auth/adapters";
 
 const options = {
   providers: [
-    // OAuth authentication providers...
-
     Providers.Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET
-    })
-  ], 
+      clientId: env.GOOGLE_ID!,
+      clientSecret: env.GOOGLE_SECRET!,
+    }),
+  ],
   callbacks: {
-    signIn: async (user, account, profile) => {
-      var isAllowedToSignIn = false
-       if(profile.email.startsWith("emptystring"))
-       {
-         isAllowedToSignIn = true
+    signIn: async (_: User, _1: Account, profile: Profile) => {
+      let isAllowedToSignIn = env.VALID_EMAILS?.split(/\s+/).includes(
+        profile.email || ""
+      )
+        ? true
+        : false;
 
-       }
-      // {
-      //   isAllowedToSignIn = true
-      // }
-      
-
-      if (isAllowedToSignIn) {
-
-        return Promise.resolve(true)
-      }
-      else{
-
-        return Promise.resolve(false)
-      }
+      return Promise.resolve(isAllowedToSignIn);
     },
   },
-  
 
-  // Optional SQL or MongoDB database to persist users
-  //database: process.env.DATABASE_URL
-}
+  database: process.env.DATABASE_URL,
+};
 
-export default (req, res) => NextAuth(req, res, options)
+export default (req: NextApiRequest, res: NextApiResponse) =>
+  NextAuth(req, res, options);

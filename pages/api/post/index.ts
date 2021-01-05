@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 // POST /api/post
 // Required fields in body: title, content

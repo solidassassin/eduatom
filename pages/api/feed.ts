@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prisma";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handle(_: NextApiRequest, res: NextApiResponse) {
   const posts = await prisma.post.findMany({
