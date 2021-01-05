@@ -9,10 +9,11 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   --text-primary: black;
   --text-secondary: black;
   --bg-primary: white;
@@ -61,9 +62,11 @@ main {
   padding: 1rem;
 }
 
-img {
+.c-img {
   max-width: 100%;
 }
+
+/*.l-img {}*/
 
 .page {
   flex-direction: row;
@@ -83,17 +86,15 @@ img {
 
 h1 {
   font-size: 10vmin;
+  text-transform: uppercase;
+  font-family: "Big John PRO Regular";
+  font-weight: bolder;
 }
 
 h2 {
   font-size: 4vmin;
-}
-
-h1,
-h2 {
-  text-transform: uppercase;
-  font-family: "Big John PRO Regular";
-  font-weight: bolder;
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 .parent {
@@ -114,10 +115,19 @@ h2 {
   display: inline-block;
   width: 30%;
   padding-right: 2rem;
+  text-align: center;
 }
 
 .row {
   display: table;
+}
+
+.eu-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  background: linear-gradient(to bottom left, white, rgba(0,0,0,0));
 }
 
 .person-name {
@@ -179,7 +189,6 @@ h2 {
 .logo {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 0.3ch;

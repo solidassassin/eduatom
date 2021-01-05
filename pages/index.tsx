@@ -9,8 +9,9 @@ type StaticFile = {
 };
 
 type Props = {
-  material: StaticFile[];
   carousel: StaticFile[];
+  content: StaticFile[];
+  cvs: StaticFile[];
 };
 
 export default function MainPage(props: Props) {
@@ -39,6 +40,9 @@ export default function MainPage(props: Props) {
             })}
           </Slider>
           <div className="comp-name">Eduatom</div>
+          <div className="eu-logo">
+            <img src="/static/images/eu.png" />
+          </div>
         </CarouselProvider>
         <div className="container-main">
           <div className="section" id="news">
@@ -95,16 +99,22 @@ export default function MainPage(props: Props) {
             <h1>Komanda</h1>
             <div className="row">
               <div className="column">
-                <h2>Saulius Mickevičius</h2>
-                <img src="/static/images/team/sm.jpg"></img>
+                <a href="/static/material/cvs/sm.pdf">
+                  <h2>Saulius Mickevičius</h2>
+                </a>
+                <img className="c-img" src="/static/images/team/sm.jpg"></img>
               </div>
               <div className="column">
-                <h2>Ilona Tandzelgoskienė</h2>
-                <img src="/static/images/team/it.jpg"></img>
+                <a href="/static/material/cvs/it.pdf">
+                  <h2>Ilona Tandzelgoskienė</h2>
+                </a>
+                <img className="c-img" src="/static/images/team/it.jpg"></img>
               </div>
               <div className="column">
-                <h2>Linara Dovydaitytė</h2>
-                <img src="/static/images/team/ld.jpg"></img>
+                <a href="/static/material/cvs/ld.pdf">
+                  <h2>Linara Dovydaitytė</h2>
+                </a>
+                <img className="c-img" src="/static/images/team/ld.jpg"></img>
               </div>
             </div>
           </div>
@@ -112,12 +122,10 @@ export default function MainPage(props: Props) {
             <h1>Rezultatai</h1>
             <h2>Mokslo publikacijos</h2>
             <ul id="members">
-              {props.material.map((file) => {
+              {props.content.map((file) => {
                 return (
                   <li>
-                    <a className="person-name" href={file.filePath}>
-                      {file.fileName}
-                    </a>
+                    <a href={file.filePath}>{file.fileName}</a>
                   </li>
                 );
               })}
@@ -150,13 +158,15 @@ function getFiles(...folder: string[]) {
 }
 
 export async function getStaticProps() {
-  const material = getFiles("material");
   const carousel = getFiles("images", "carousel");
+  const content = getFiles("material", "content");
+  const cvs = getFiles("material", "cvs");
 
   return {
     props: {
-      material,
       carousel,
+      content,
+      cvs,
     },
   };
 }
