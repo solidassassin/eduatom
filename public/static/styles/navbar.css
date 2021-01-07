@@ -127,7 +127,7 @@ h2 {
   right: 0;
   top: 0;
   background: transparent;
-  background: linear-gradient(to bottom left, white, rgba(0,0,0,0));
+  background: radial-gradient(farthest-side at top right, white, transparent);
 }
 
 .person-name {
