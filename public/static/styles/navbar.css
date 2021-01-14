@@ -8,8 +8,8 @@
   src: url("../fonts/Headache.otf") format("opentype");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 
 :root {
   font-size: 16px;
@@ -18,8 +18,9 @@
   --text-secondary: black;
   --bg-primary: white;
   --bg-secondary: #bcbcbc;
-  --transition-speed: 500ms;
+  --transition-speed: 300ms;
 }
+
 .background {
   position: relative;
   margin: 0 auto;
@@ -28,6 +29,7 @@
   z-index: 0;
   text-align: center; /* Add This*/
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -66,14 +68,13 @@ main {
   max-width: 100%;
 }
 
-/*.l-img {}*/
-
 .page {
   flex-direction: row;
   margin-left: auto;
   width: 100%;
   height: auto;
 }
+
 .container-main {
   margin-left: 7rem;
   border-width: 3px;
@@ -89,6 +90,11 @@ h1 {
   text-transform: uppercase;
   font-family: "Big John PRO Regular";
   font-weight: bolder;
+}
+
+.h1a {
+  font-size: 5vmin;
+  text-align: center;
 }
 
 h2 {
@@ -122,6 +128,18 @@ h2 {
   display: table;
 }
 
+.acolumn {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  padding: 5%;
+}
+
+.title-box {
+  border: 3px solid black;
+  padding: 1rem;
+}
+
 .eu-logo {
   position: absolute;
   right: 0;
@@ -137,7 +155,7 @@ h2 {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  transition: width var(--transition-speed) ease;
   overflow: hidden;
 }
 

@@ -1,7 +1,13 @@
 import fs from "fs";
 import path from "path";
 import Navbar from "../components/Navbar";
-import { CarouselProvider, Slider, Slide, Image } from "pure-react-carousel";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  Image as Cimg,
+} from "pure-react-carousel";
+import Image from "next/image";
 
 type StaticFile = {
   fileName: string;
@@ -30,18 +36,18 @@ export default function MainPage(props: Props) {
             {Array.from(props.carousel.entries()).map((value) => {
               return (
                 <Slide index={value[0]}>
-                  <Image
+                  <Cimg
                     hasMasterSpinner={false}
                     isBgImage={true}
                     src={value[1].filePath}
-                  ></Image>
+                  ></Cimg>
                 </Slide>
               );
             })}
           </Slider>
           <div className="comp-name">Eduatom</div>
           <div className="eu-logo">
-            <img src="/static/images/eu.png" />
+            <Image src="/static/images/eu.png" width={101} height={69.5} />
           </div>
         </CarouselProvider>
         <div className="container-main">
@@ -102,19 +108,37 @@ export default function MainPage(props: Props) {
                 <a href="/static/material/cvs/sm.pdf">
                   <h2>Saulius Mickevičius</h2>
                 </a>
-                <img className="c-img" src="/static/images/team/sm.jpg"></img>
+                <Image
+                  className="c-img"
+                  src="/static/images/team/sm.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <a href="/static/material/cvs/it.pdf">
                   <h2>Ilona Tandzelgoskienė</h2>
                 </a>
-                <img className="c-img" src="/static/images/team/it.jpg"></img>
+                <Image
+                  className="c-img"
+                  src="/static/images/team/it.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <a href="/static/material/cvs/ld.pdf">
                   <h2>Linara Dovydaitytė</h2>
                 </a>
-                <img className="c-img" src="/static/images/team/ld.jpg"></img>
+                <Image
+                  className="c-img"
+                  src="/static/images/team/ld.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
             </div>
           </div>
