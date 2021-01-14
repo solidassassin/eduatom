@@ -1,6 +1,8 @@
-import type { Post } from "@prisma/client";
 import prisma from "lib/prisma";
-import { useSession } from "next-auth/client";
+import { getSession } from "next-auth/client";
+import type { Post } from "@prisma/client";
+import type { Session } from "next-auth";
+import type { NextPageContext } from "next";
 
 type StaticPath = {
   params: {
@@ -10,17 +12,19 @@ type StaticPath = {
 
 type Props = {
   post: Post;
+  session: Session;
 };
 
 export default function PostEditor(props: Props) {
-  const [session] = useSession();
-
-  return session ? (
+  return props.session ? (
     <div>{props.post.title}</div>
   ) : (
     <div>
       <h1>Oops...</h1>
-      <h2>Looks like you don't have permission to access this page. You can log in right <a>here</a></h2>
+      <h2>
+        Looks like you don't have permission to access this page. You can log in
+        right <a>here</a>
+      </h2>
     </div>
   );
 }
@@ -39,12 +43,17 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(path: StaticPath) {
+export async function getStaticProps(context: NextPageContext & StaticPath) {
   const post = await prisma.post.findUnique({
     where: {
-      id: parseInt(path.params.id),
+      id: parseInt(context.params.id),
     },
   });
 
-  return { props: { post } };
+  return {
+    props: {
+      post,
+      session: await getSession(context),
+    },
+  };
 }

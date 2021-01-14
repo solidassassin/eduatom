@@ -1,7 +1,11 @@
 import React from "react";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { getSession, signOut } from "next-auth/client";
 import prisma from "lib/prisma";
 import { Post } from "@prisma/client";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import type { NextPageContext } from "next";
+import type {Session, User} from "next-auth";
 /*
 type PostJson = {
   id: number;
@@ -17,12 +21,19 @@ type PostJson = {
 type Props = {
   drafts: Post[];
   published: Post[];
+  session: Session & {user: User}
 };
 
 export default function myComponent(props: Props) {
-  const [session] = useSession();
+  const router = useRouter();
 
-  return session ? (
+  useEffect(() => {
+    if (!props.session) {
+      router.push("/api/auth/signin");
+    }
+  }, [props.session]);
+
+  return (
     <div>
       <div className="arow">
         <div className="acolumn">
@@ -45,18 +56,13 @@ export default function myComponent(props: Props) {
         </div>
       </div>
       <br />
-      Signed in as {session.user.email} <br />
+      Signed in as {props.session.user.email} <br />
       <button onClick={() => signOut()}>Sign out</button>
-    </div>
-  ) : (
-    <div>
-      Sign in <br />
-      <button onClick={() => signIn()}>Sign in</button>
     </div>
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context: NextPageContext) {
   /*
   const draft = await fetch("http://localhost:3000/api/drafts");
   const pub = await fetch("http://localhost:3000/api/feed");
@@ -80,6 +86,7 @@ export async function getServerSideProps() {
     props: {
       drafts,
       published,
+      session: await getSession(context),
     },
   };
 }
