@@ -33,7 +33,7 @@ export default function myComponent(props: Props) {
     }
   }, [props.session]);
 
-  return (
+  return props.session ? (
     <div>
       <div className="arow">
         <div className="acolumn">
@@ -59,6 +59,8 @@ export default function myComponent(props: Props) {
       Signed in as {props.session.user.email} <br />
       <button onClick={() => signOut()}>Sign out</button>
     </div>
+  ) : (
+    <div />
   );
 }
 
