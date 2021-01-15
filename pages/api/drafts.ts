@@ -1,9 +1,9 @@
 import prisma from "../../lib/prisma";
-import { useSession } from "next-auth/client";
+import { getSession } from "next-auth/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async (_: NextApiRequest, res: NextApiResponse) => {
-  const session = useSession();
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const session = await getSession({ req });
 
   if (session) {
     const posts = await prisma.post.findMany({
@@ -13,4 +13,5 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
   } else {
     res.status(401);
   }
+  res.end();
 };
