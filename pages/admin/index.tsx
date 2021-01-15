@@ -5,7 +5,7 @@ import { Post } from "@prisma/client";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import type { NextPageContext } from "next";
-import type {Session, User} from "next-auth";
+import type { Session } from "next-auth/client";
 /*
 type PostJson = {
   id: number;
@@ -21,7 +21,7 @@ type PostJson = {
 type Props = {
   drafts: Post[];
   published: Post[];
-  session: Session & {user: User}
+  session: Session;
 };
 
 export default function myComponent(props: Props) {

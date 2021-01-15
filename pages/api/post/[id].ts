@@ -1,36 +1,86 @@
 import prisma from "../../../lib/prisma";
+import formatResponse from "utils/response";
+import { getSession, Session } from "next-auth/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const session = await getSession({ req });
   const postId = Number(req.query.id);
 
   if (req.method === "GET") {
-    handleGet(postId, res);
+    handleGet(postId, res, session);
   } else if (req.method === "DELETE") {
-    handleDelete(postId, res);
+    handleDelete(postId, res, session);
+  } else if (req.method === "PUT") {
+    handlePut(postId, req, res, session);
   } else {
     throw new Error(
       `The HTTP ${req.method} method is not supported at this route.`
     );
   }
+  res.end();
 }
 
 // GET /api/post/:id
-async function handleGet(postId: number, res: NextApiResponse) {
+async function handleGet(
+  postId: number,
+  res: NextApiResponse,
+  session: Session | null
+) {
   const post = await prisma.post.findUnique({
     where: { id: postId },
   });
-  res.json(post);
+
+  if (session && post?.published) {
+    const result = formatResponse(post);
+    res.json(result);
+  } else {
+    res.status(401);
+  }
 }
 
 // DELETE /api/post/:id
-async function handleDelete(postId: number, res: NextApiResponse) {
-  const post = await prisma.post.delete({
-    where: { id: postId },
-  });
-  res.json(post);
+async function handleDelete(
+  postId: number,
+  res: NextApiResponse,
+  session: Session | null
+) {
+  if (session) {
+    const post = await prisma.post.delete({
+      where: { id: postId },
+    });
+
+    const result = formatResponse(post);
+    res.json(result);
+  } else {
+    res.status(401);
+  }
 }
 
+// PUT /api/post/:id
+async function handlePut(
+  postId: number,
+  req: NextApiRequest,
+  res: NextApiResponse,
+  session: Session | null
+) {
+  const { title, content } = req.body;
+
+  if (session) {
+    const post = await prisma.post.update({
+      where: { id: postId },
+      data: {
+        title: title,
+        content: content,
+      },
+    });
+
+    const result = formatResponse(post);
+    res.json(result);
+  } else {
+    res.status(401);
+  }
+}

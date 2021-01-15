@@ -1,5 +1,6 @@
 import prisma from "../../../lib/prisma";
 import { getSession } from "next-auth/client";
+import formatResponse from "utils/response";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 // PUT /api/publish/:id
@@ -11,8 +12,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       where: { id: Number(postId) },
       data: { published: true },
     });
-    res.json(post);
+
+    const result = formatResponse(post);
+    res.json(result);
   } else {
     res.status(401);
   }
+  res.end();
 };
