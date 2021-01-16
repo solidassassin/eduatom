@@ -1,26 +1,14 @@
 import React from "react";
 import { getSession, signOut } from "next-auth/client";
-import prisma from "lib/prisma";
-import { Post } from "@prisma/client";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import type { NextPageContext } from "next";
 import type { Session } from "next-auth/client";
-/*
-type PostJson = {
-  id: number;
-  createdDate: string;
-  createdTime: string;
-  updatedDate: string;
-  updatedTime: string;
-  title: string;
-  content: string;
-  published: boolean;
-};
-*/
+import type { PostJson } from "utils/prop-types";
+
 type Props = {
-  drafts: Post[];
-  published: Post[];
+  drafts: PostJson[];
+  published: PostJson[];
   session: Session;
 };
 
@@ -38,13 +26,13 @@ export default function myComponent(props: Props) {
       <div className="arow">
         <div className="acolumn">
           <h1 className="h1a">Juodraščiai</h1>
-          {props.published.map((post) => {
+          {props.drafts.map((post) => {
             return <div className="title-box">{post.title}</div>;
           })}
         </div>
         <div className="acolumn">
           <h1 className="h1a">Naujienos</h1>
-          {props.drafts.map((post) => {
+          {props.published.map((post) => {
             return (
               <div className="title-box">
                 {post.title}
@@ -65,30 +53,23 @@ export default function myComponent(props: Props) {
 }
 
 export async function getServerSideProps(context: NextPageContext) {
-  /*
-  const draft = await fetch("http://localhost:3000/api/drafts");
+  const session = await getSession(context);
+
   const pub = await fetch("http://localhost:3000/api/feed");
-
-  const drafts: PostJson[] = await draft.json();
-  const published: PostJson[] = await pub.json();
-  */
-  const drafts = await prisma.post.findMany({
-    where: {
-      published: false,
+  const dra = await fetch("http://localhost:3000/api/drafts", {
+    headers: {
+      cookie: context.req?.headers.cookie!,
     },
   });
 
-  const published = await prisma.post.findMany({
-    where: {
-      published: true,
-    },
-  });
+  const published = await pub.json();
+  const drafts = await dra.json();
 
   return {
     props: {
       drafts,
       published,
-      session: await getSession(context),
+      session,
     },
   };
 }

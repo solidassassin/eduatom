@@ -1,10 +1,9 @@
-import prisma from "lib/prisma";
 import { getSession } from "next-auth/client";
 import { useEffect } from "react";
 import Router from "next/router";
-import type { Post } from "@prisma/client";
 import type { Session } from "next-auth";
 import type { NextPageContext } from "next";
+import type { PostJson } from "utils/prop-types";
 
 type StaticPath = {
   params: {
@@ -13,7 +12,7 @@ type StaticPath = {
 };
 
 type Props = {
-  post: Post;
+  post: PostJson;
   session: Session;
 };
 
@@ -24,21 +23,20 @@ export default function PostEditor(props: Props) {
     }
   }, [props.session]);
 
-  return props.session ? (
-    <div>{props.post.title}</div>
-  ) : (
-    <div />
-  );
+  return props.session ? <div>{props.post.title}</div> : <div />;
 }
 
 export async function getServerSideProps(
   context: NextPageContext & StaticPath
 ) {
-  const post = await prisma.post.findUnique({
-    where: {
-      id: parseInt(context.params.id),
-    },
-  });
+  const post = await fetch(
+    `http://localhost:3000/api/post/${context.params.id}`,
+    {
+      headers: {
+        cookie: context.req?.headers.cookie!,
+      },
+    }
+  );
 
   return {
     props: {

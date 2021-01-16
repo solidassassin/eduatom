@@ -1,7 +1,7 @@
 import prisma from "../../lib/prisma";
 import { getSession } from "next-auth/client";
-import type { NextApiRequest, NextApiResponse } from "next";
 import formatResponse from "utils/response";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const session = await getSession({ req });
