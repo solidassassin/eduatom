@@ -21,7 +21,7 @@ export default async function handle(
     const result = formatResponse(post);
     res.json(result);
   } else {
-    res.status(401);
+    res.status(401).json({});
   }
   res.end();
 }

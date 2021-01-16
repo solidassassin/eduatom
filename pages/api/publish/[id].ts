@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const result = formatResponse(post);
     res.json(result);
   } else {
-    res.status(401);
+    res.status(401).json({});
   }
   res.end();
 };

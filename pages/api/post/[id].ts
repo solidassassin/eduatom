@@ -38,7 +38,7 @@ async function handleGet(
     const result = formatResponse(post);
     res.json(result);
   } else {
-    res.status(401);
+    res.status(401).json({});
   }
 }
 
@@ -56,7 +56,7 @@ async function handleDelete(
     const result = formatResponse(post);
     res.json(result);
   } else {
-    res.status(401);
+    res.status(401).json({});
   }
 }
 
@@ -81,6 +81,6 @@ async function handlePut(
     const result = formatResponse(post);
     res.json(result);
   } else {
-    res.status(401);
+    res.status(401).json({});
   }
 }
