@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import type { NextPageContext } from "next";
 import type { Session } from "next-auth/client";
 import type { PostJson } from "utils/prop-types";
+import Link from "next/link";
 
 type Props = {
   drafts: PostJson[];
@@ -12,7 +13,7 @@ type Props = {
   session: Session;
 };
 
-export default function myComponent(props: Props) {
+export default function adminPage(props: Props) {
   const router = useRouter();
 
   useEffect(() => {
@@ -27,7 +28,12 @@ export default function myComponent(props: Props) {
         <div className="acolumn">
           <h1 className="h1a">Juodraščiai</h1>
           {props.drafts.map((post) => {
-            return <div className="title-box">{post.title}</div>;
+            return (
+              <div className="title-box">
+                <h2>{post.title}</h2>
+                <Link href={`admin/post/${post.id}`}><a>Lol</a></Link>
+              </div>
+            );
           })}
         </div>
         <div className="acolumn">

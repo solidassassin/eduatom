@@ -10,6 +10,12 @@ export default async function handle(
   const session = await getSession({ req });
   const postId = Number(req.query.id);
 
+  if (isNaN(postId)) {
+    res.status(400).json({});
+    res.end();
+    return;
+  }
+
   if (req.method === "GET") {
     handleGet(postId, res, session);
   } else if (req.method === "DELETE") {
@@ -34,7 +40,9 @@ async function handleGet(
     where: { id: postId },
   });
 
-  if (session && post?.published) {
+  if (!post) {
+    res.status(404).json({});
+  } else if (session || post.published) {
     const result = formatResponse(post);
     res.json(result);
   } else {
@@ -48,15 +56,19 @@ async function handleDelete(
   res: NextApiResponse,
   session: Session | null
 ) {
-  if (session) {
-    const post = await prisma.post.delete({
-      where: { id: postId },
-    });
+  try {
+    if (session) {
+      const post = await prisma.post.delete({
+        where: { id: postId },
+      });
 
-    const result = formatResponse(post);
-    res.json(result);
-  } else {
-    res.status(401).json({});
+      const result = formatResponse(post);
+      res.json(result);
+    } else {
+      res.status(401).json({});
+    }
+  } catch (RecordNotFound) {
+    res.status(404).json({});
   }
 }
 
@@ -68,19 +80,22 @@ async function handlePut(
   session: Session | null
 ) {
   const { title, content } = req.body;
+  try {
+    if (session) {
+      const post = await prisma.post.update({
+        where: { id: postId },
+        data: {
+          title: title,
+          content: content,
+        },
+      });
 
-  if (session) {
-    const post = await prisma.post.update({
-      where: { id: postId },
-      data: {
-        title: title,
-        content: content,
-      },
-    });
-
-    const result = formatResponse(post);
-    res.json(result);
-  } else {
-    res.status(401).json({});
+      const result = formatResponse(post);
+      res.json(result);
+    } else {
+      res.status(401).json({});
+    }
+  } catch (RecordNotFound) {
+    res.status(404).json({});
   }
 }

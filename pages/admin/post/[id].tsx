@@ -29,7 +29,7 @@ export default function PostEditor(props: Props) {
 export async function getServerSideProps(
   context: NextPageContext & StaticPath
 ) {
-  const post = await fetch(
+  const postResponse = await fetch(
     `http://localhost:3000/api/post/${context.params.id}`,
     {
       headers: {
@@ -37,6 +37,7 @@ export async function getServerSideProps(
       },
     }
   );
+  const post = await postResponse.json();
 
   return {
     props: {
