@@ -12,7 +12,6 @@ export default async function handle(
 
   if (isNaN(postId)) {
     res.status(400).json({});
-    res.end();
     return;
   }
 
@@ -27,7 +26,6 @@ export default async function handle(
       `The HTTP ${req.method} method is not supported at this route.`
     );
   }
-  res.end();
 }
 
 // GET /api/post/:id
