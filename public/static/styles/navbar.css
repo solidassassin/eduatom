@@ -10,13 +10,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-
 :root {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   --text-primary: black;
   --text-secondary: black;
-  --bg-primary: white;
+  --bg-primary: #eee;
   --bg-secondary: #bcbcbc;
   --transition-speed: 300ms;
 }
@@ -45,7 +44,7 @@ ul {
 
 body {
   color: black;
-  background-color: #eee;
+  background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
   overflow: overlay;
@@ -56,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #bcbcbc;
+  background: var(--bg-secondary);
 }
 
 main {
@@ -136,8 +135,23 @@ h2 {
 }
 
 .title-box {
-  border: 3px solid black;
   padding: 1rem;
+}
+
+.title-box:hover {
+  background: var(--bg-secondary);
+}
+
+.panel-button {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-button:hover {
+  background-color: salmon;
+  color: black;
 }
 
 .eu-logo {
@@ -154,7 +168,7 @@ h2 {
 
 .navbar {
   position: fixed;
-  background-color: var(--bg-primary);
+  background-color: white;
   transition: width var(--transition-speed) ease;
   overflow: hidden;
 }
@@ -244,7 +258,7 @@ h2 {
   }
 
   .navbar::-webkit-scrollbar-thumb {
-    background: #bcbcbc;
+    background: var(--bg-secondary);
   }
 
   .container-main {
@@ -271,6 +285,13 @@ h2 {
   .column {
     width: 90%;
     border-right: 5px;
+  }
+
+  .acolumn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5%;
+    width: 90%;
   }
 }
 
