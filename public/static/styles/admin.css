@@ -1,0 +1,40 @@
+.h1a {
+  font-size: 5vmin;
+  text-align: center;
+}
+
+.acolumn {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  padding: 5%;
+}
+
+.title-box {
+  padding: 1rem;
+}
+
+.title-box:hover {
+  background: var(--bg-secondary);
+}
+
+.panel-button {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-button:hover {
+  background-color: salmon;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .acolumn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5%;
+    width: 90%;
+  }
+}

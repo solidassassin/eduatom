@@ -1,4 +1,6 @@
-import "../public/static/styles/navbar.css";
+import "public/static/styles/home.css";
+import "public/static/styles/navbar.css";
+import "public/static/styles/admin.css";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { Provider } from "next-auth/client";
 import type { AppProps } from "next/dist/next-server/lib/router/router";

@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Big John PRO Regular";
+  src: url("../fonts/BigJohnPRORegular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Headache";
+  src: url("../fonts/Headache.otf") format("opentype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  --text-primary: black;
+  --text-secondary: black;
+  --bg-primary: #eee;
+  --bg-secondary: #bcbcbc;
+  --transition-speed: 300ms;
+}
+
+.background {
+  position: relative;
+  margin: 0 auto;
+  clear: left;
+  height: auto;
+  z-index: 0;
+  text-align: center; /* Add This*/
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: salmon;
+}
+
+ul {
+  list-style-type: square;
+}
+
+body {
+  color: black;
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 10vmin;
+  text-transform: uppercase;
+  font-family: "Big John PRO Regular";
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 4vmin;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.page {
+  flex-direction: row;
+  margin-left: auto;
+  width: 100%;
+  height: auto;
+}
+
+.container-main {
+  margin-left: 7rem;
+  border-width: 3px;
+  height: 100%;
+}
+.section {
+  flex-direction: column;
+  border-width: 3px;
+}
+
+.comp-name {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 10vw;
+  font-family: "Headache";
+  color: white;
+}
+
+.column {
+  display: inline-block;
+  width: 30%;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.row {
+  display: table;
+}
+
+.c-img {
+  max-width: 100%;
+}
+
+.eu-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  background: radial-gradient(farthest-side at top right, white, transparent);
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin: 0;
+  }
+
+  .column {
+    width: 90%;
+    border-right: 5px;
+  }
+
+  .container-main {
+    margin-left: 1rem;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+}
