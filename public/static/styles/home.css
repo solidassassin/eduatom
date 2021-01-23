@@ -118,6 +118,10 @@ h2 {
   max-width: 100%;
 }
 
+.parent {
+  position: relative;
+}
+
 .eu-logo {
   position: absolute;
   right: 0;
