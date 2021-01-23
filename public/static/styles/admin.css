@@ -10,24 +10,59 @@
   padding: 5%;
 }
 
-.title-box {
+.post-title {
   padding: 1rem;
+  display: inline-block;
 }
 
+.delete {
+  float: right;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background: #ff9999;
+}
+
+.delete:hover {
+  background: #ff5555;
+  color: black;
+}
+.title-box {
+  white-space: unset;
+}
 .title-box:hover {
   background: var(--bg-secondary);
 }
 
-.panel-button {
+.new-post {
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  background: #a0dbc9;
 }
 
-.panel-button:hover {
-  background-color: salmon;
+.new-post:hover {
+  background: #66cca7;
   color: black;
+}
+
+.logout {
+  padding: 1rem;
+  text-align: center;
+  float: right;
+  font-weight: bold;
+  background: #ff9999;
+}
+
+.logout:hover {
+  background: #ff5555;
+  color: black;
+}
+
+.username {
+  float: right;
+  padding: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
