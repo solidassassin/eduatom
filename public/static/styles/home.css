@@ -11,7 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
   --text-primary: black;
   --text-secondary: black;
@@ -26,7 +26,7 @@
   clear: left;
   height: auto;
   z-index: 0;
-  text-align: center; /* Add This*/
+  text-align: center;
 }
 
 a {

@@ -12,7 +12,13 @@
 
 .post-title {
   padding: 1rem;
+  max-height: 1rem;
   display: inline-block;
+  max-width: 50%;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .delete {
@@ -71,5 +77,15 @@
     vertical-align: top;
     padding: 5%;
     width: 90%;
+  }
+
+  .username {
+    float: right;
+    padding: 1rem;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20%;
   }
 }
