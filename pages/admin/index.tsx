@@ -2,7 +2,6 @@ import React from "react";
 import { getSession, signOut } from "next-auth/client";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import prisma from "lib/prisma";
 import type { NextPageContext } from "next";
 import type { Session } from "next-auth/client";
 import type { PostJson } from "utils/prop-types";
@@ -81,14 +80,7 @@ export async function getServerSideProps(context: NextPageContext) {
       cookie: context.req?.headers.cookie!,
     },
   });
-  /*
-  await prisma.post.create({
-    data: {
-      title: "A very long title it is indeed idk why I did this",
-      content: "lol"
-    }
-  })
- */
+
   const published = await pub.json();
   const drafts = await dra.json();
 
