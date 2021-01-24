@@ -1,4 +1,4 @@
-import prisma from "../../../lib/prisma";
+import prisma from "lib/prisma";
 import { getSession } from "next-auth/client";
 import formatResponse from "utils/response";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,7 +10,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const postId = req.query.id;
     const post = await prisma.post.update({
       where: { id: Number(postId) },
-      data: { published: true },
+      data: {
+        published: true,
+        createdAt: new Date(),
+      },
     });
 
     const result = formatResponse(post);
