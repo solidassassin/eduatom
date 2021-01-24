@@ -6,6 +6,7 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
   const posts = await prisma.post.findMany({
     where: { published: true },
   });
+  posts.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 
   const result = posts.map((post) => formatResponse(post));
   res.json(result);
