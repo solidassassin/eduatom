@@ -8,6 +8,9 @@ import {
   Image as Cimg,
 } from "pure-react-carousel";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import type { PostJson } from "utils/prop-types";
+import type { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 
 type StaticFile = {
   fileName: string;
@@ -18,7 +21,17 @@ type Props = {
   carousel: StaticFile[];
   content: StaticFile[];
   cvs: StaticFile[];
+  posts: PostJson[];
 };
+
+function maxImg(
+  props: DetailedHTMLProps<
+    ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  >
+) {
+  return <img {...props} style={{ maxWidth: "100%" }} />;
+}
 
 export default function MainPage(props: Props) {
   return (
@@ -47,33 +60,55 @@ export default function MainPage(props: Props) {
           </Slider>
           <div className="comp-name">Eduatom</div>
           <div className="eu-logo">
-            <Image src="/static/images/eu.png" width={101} height={69.5} />
+            <p className="temp">
+              2014-2021 Operational <br /> Programme for the <br />
+              European Union Funds <br />
+              Investments in Lithuania
+            </p>
+            <img className="eu-size" src="/static/images/eu.png" />
           </div>
         </CarouselProvider>
         <div className="container-main">
           <div className="section" id="news">
             <h1>Naujienos</h1>
-            <p className="text-post">Pildyti čia</p>
+            <div className="row2">
+              {props.posts.map((post) => {
+                return (
+                  <div className="column2">
+                    <h2>{post.title}</h2>
+                    <ReactMarkdown renderers={{ image: maxImg }}>
+                      {post.content}
+                    </ReactMarkdown>
+                  </div>
+                );
+              })}
+              <p className="flow">
+                <a className="read-more" href="http://localhost:3000/news">
+                  Skaityti daugiau
+                </a>
+              </p>
+            </div>
           </div>
           <div className="section" id="project">
             <h1>Projektas</h1>
             <p className="text-post">
               <b>EDUATOM</b> projektas skirtas sukurti edukacinio ir pažintinio
-              turizmo plėtros didaktinių technologijų sprendinius remiantis
-              Ignalinos atominės elektrinės regiono branduolinio edukacinio
-              maršruto kūrimo atveju. Tyrėjai projekte siekia moksliškai
-              pagrįsti Ignalinos atominės elektrinės regiono edukacinio maršruto
-              kūrimo didaktinius sprendimus ir technologijas bei remiantis šio
-              maršruto kūrimo atveju sustiprinti edukacinio turizmo ir mokslo
-              komunikacijos metodologinį pagrindą. Siekiama moksliškai pagrįsti
-              naują edukacinį ir mokslo komunikacijos maršrutą, kuris atitiktų
-              branduolinio/ atominio turizmo, atominių muziejų, informacinių
-              centrų ir edukacinių turistinių mokslo centrų plėtojimo
-              tendencijas. Per ataskaitinį laikotarpį buvo atliekamas tyrimas
-              siekiant atskleisti Visagino, kaip IAE satelitinio miesto
-              daugiakultūrinio identiteto potencialą kūrybinėms industrijoms ir
-              verslumui plėtoti pagrindžiant šiuolaikinio edukacinio turizmo
-              didaktinių sprendimų konstravimo principus.
+              turizmo plėtros didaktinių technohttps://pointerpointer.comlogijų
+              sprendinius remiantis Ignalinos atominės elektrinės regiono
+              branduolinio edukacinio maršruto kūrimo atveju. Tyrėjai projekte
+              siekia moksliškai pagrįsti Ignalinos atominės elektrinės regiono
+              edukacinio maršruto kūrimo didaktinius sprendimus ir technologijas
+              bei remiantis šio maršruto kūrimo atveju sustiprinti edukacinio
+              turizmo ir mokslo komunikacijos metodologinį pagrindą. Siekiama
+              moksliškai pagrįsti naują edukacinį ir mokslo komunikacijos
+              maršrutą, kuris atitiktų branduolinio/ atominio turizmo, atominių
+              muziejų, informacinių centrų ir edukacinių turistinių mokslo
+              centrų plėtojimo tendencijas. Per ataskaitinį laikotarpį buvo
+              atliekamas tyrimas siekiant atskleisti Visagino, kaip IAE
+              satelitinio miesto daugiakultūrinio identiteto potencialą
+              kūrybinėms industrijoms ir verslumui plėtoti pagrindžiant
+              šiuolaikinio edukacinio turizmo didaktinių sprendimų konstravimo
+              principus.
             </p>
             <p>
               <b>Projekto tikslas</b> - sukurti edukacinio ir pažintinio turizmo
@@ -185,12 +220,32 @@ export async function getStaticProps() {
   const carousel = getFiles("images", "carousel");
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
+  const posts = [
+    {
+      id: 1,
+      title: "Nice and a really long title it is",
+      content:
+        "Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing ",
+    },
+    {
+      id: 2,
+      title: "Nice2",
+      content:
+        "![Lol](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg)",
+    },
+    {
+      id: 3,
+      title: "Nice2",
+      content: "*Test3*",
+    },
+  ];
 
   return {
     props: {
       carousel,
       content,
       cvs,
+      posts,
     },
   };
 }
