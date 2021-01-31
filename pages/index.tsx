@@ -9,8 +9,8 @@ import {
 } from "pure-react-carousel";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { maxImg } from "utils/helpers";
 import type { PostJson } from "utils/prop-types";
-import type { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 
 type StaticFile = {
   fileName: string;
@@ -23,15 +23,6 @@ type Props = {
   cvs: StaticFile[];
   posts: PostJson[];
 };
-
-function maxImg(
-  props: DetailedHTMLProps<
-    ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >
-) {
-  return <img {...props} style={{ maxWidth: "100%" }} />;
-}
 
 export default function MainPage(props: Props) {
   return (

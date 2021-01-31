@@ -1,19 +1,10 @@
 import ReactMarkdown from "react-markdown";
+import { maxImg } from "utils/helpers";
 import type { PostJson } from "utils/prop-types";
-import type { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 
 type Props = {
   posts: PostJson[];
 };
-
-function maxImg(
-  props: DetailedHTMLProps<
-    ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >
-) {
-  return <img {...props} style={{ maxWidth: "100%" }} />;
-}
 
 export default function NewsPage(props: Props) {
   return (

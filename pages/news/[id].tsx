@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
+import { maxImg } from "utils/helpers";
 import type { PostJson } from "utils/prop-types";
-import type { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 import type { NextPageContext } from "next";
 
 type Props = {
@@ -12,15 +12,6 @@ type StaticPath = {
     id: string;
   };
 };
-
-function maxImg(
-  props: DetailedHTMLProps<
-    ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >
-) {
-  return <img {...props} style={{ maxWidth: "100%" }} />;
-}
 
 export default function News(props: Props) {
   return (
