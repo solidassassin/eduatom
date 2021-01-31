@@ -15,16 +15,20 @@ function maxImg(
   return <img {...props} style={{ maxWidth: "100%" }} />;
 }
 
-export default function MainPage(props: Props) {
+export default function NewsPage(props: Props) {
   return (
-    <div className="news-feed">
+    <div>
+      <h1 className="padtitle">Naujienos</h1>
       {props.posts.map((post) => {
         return (
-          <div>
-            <h2>{post.title}</h2>
+          <div className="news-feed">
+            <a href={`news/${post.id}`}>
+              <h2>{post.title}</h2>
+            </a>
             <ReactMarkdown renderers={{ image: maxImg }}>
               {post.content}
             </ReactMarkdown>
+            <p className="flow"></p>
           </div>
         );
       })}
@@ -33,25 +37,8 @@ export default function MainPage(props: Props) {
 }
 
 export async function getStaticProps() {
-  const posts = [
-    {
-      id: 1,
-      title: "Nice and a really long title it is",
-      content:
-        "Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing ",
-    },
-    {
-      id: 2,
-      title: "Nice2",
-      content:
-        "![Lol](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg)",
-    },
-    {
-      id: 3,
-      title: "Nice2",
-      content: "*Test3*",
-    },
-  ];
+  const pub = await fetch("http://localhost:3000/api/feed");
+  const posts = await pub.json();
 
   return {
     props: {
