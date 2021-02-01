@@ -211,32 +211,16 @@ export async function getStaticProps() {
   const carousel = getFiles("images", "carousel");
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
-  const posts = [
-    {
-      id: 1,
-      title: "Nice and a really long title it is",
-      content:
-        "Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing ",
-    },
-    {
-      id: 2,
-      title: "Nice2",
-      content:
-        "![Lol](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg)",
-    },
-    {
-      id: 3,
-      title: "Nice2",
-      content: "*Test3*",
-    },
-  ];
+
+  const pub = await fetch("http://localhost:3000/api/feed");
+  const posts: PostJson[] = await pub.json();
 
   return {
     props: {
       carousel,
       content,
       cvs,
-      posts,
+      posts: posts.length > 3 ? posts.slice(0, 3) : posts,
     },
   };
 }
