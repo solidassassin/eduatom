@@ -222,5 +222,6 @@ export async function getStaticProps() {
       cvs,
       posts: posts.length > 3 ? posts.slice(0, 3) : posts,
     },
+    revalidate: 900,
   };
 }
