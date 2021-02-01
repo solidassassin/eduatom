@@ -131,36 +131,36 @@ export default function MainPage(props: Props) {
             <h1>Komanda</h1>
             <div className="row">
               <div className="column">
-                <a href="/static/material/cvs/sm.pdf">
+                <a href="/material/cvs/sm.pdf">
                   <h2>Saulius Mickevičius</h2>
                 </a>
                 <Image
                   className="c-img"
-                  src="/static/images/team/sm.jpg"
+                  src="/images/team/sm.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
                 ></Image>
               </div>
               <div className="column">
-                <a href="/static/material/cvs/it.pdf">
+                <a href="/material/cvs/it.pdf">
                   <h2>Ilona Tandzelgoskienė</h2>
                 </a>
                 <Image
                   className="c-img"
-                  src="/static/images/team/it.jpg"
+                  src="/images/team/it.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
                 ></Image>
               </div>
               <div className="column">
-                <a href="/static/material/cvs/ld.pdf">
+                <a href="/material/cvs/ld.pdf">
                   <h2>Linara Dovydaitytė</h2>
                 </a>
                 <Image
                   className="c-img"
-                  src="/static/images/team/ld.jpg"
+                  src="/images/team/ld.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
@@ -193,12 +193,12 @@ export default function MainPage(props: Props) {
 }
 
 function getPath(...folder: string[]) {
-  return path.join(process.cwd(), "public", "static", ...folder);
+  return path.join(process.cwd(), "public", ...folder);
 }
 
 function getFiles(...folder: string[]) {
   return fs.readdirSync(getPath(...folder)).map((file: string) => {
-    const filePath = path.join("static", ...folder, file);
+    const filePath = path.join(...folder, file);
     const fileName = file.replace(/-/g, " ").replace(/\.\w*$/, "");
     return {
       fileName,

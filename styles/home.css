@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Big John PRO Regular";
-  src: url("../public/static/fonts/BigJohnPRORegular.otf") format("opentype");
+  src: url("../public/fonts/BigJohnPRORegular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Headache";
-  src: url("../public/static/fonts/Headache.otf") format("opentype");
+  src: url("../public/fonts/Headache.otf") format("opentype");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
