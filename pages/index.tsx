@@ -56,7 +56,7 @@ export default function MainPage(props: Props) {
               European Union Funds <br />
               Investments in Lithuania
             </p>
-            <img className="eu-size" src="/static/images/eu.png" />
+            <img className="eu-size" src="/images/eu.png" />
           </div>
         </CarouselProvider>
         <div className="container-main">
