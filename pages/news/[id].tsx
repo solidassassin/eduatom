@@ -15,7 +15,7 @@ type StaticPath = {
 
 export default function News(props: Props) {
   return (
-    <div className="padtitle">
+    <div className="pad-title">
       <h2>{props.post.title}</h2>
       <ReactMarkdown renderers={{ image: maxImg }}>
         {props.post.content}

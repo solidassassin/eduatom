@@ -9,7 +9,7 @@ type Props = {
 export default function NewsPage(props: Props) {
   return (
     <div>
-      <h1 className="padtitle">Naujienos</h1>
+      <h1 className="pad-title">Naujienos</h1>
       {props.posts.map((post) => {
         return (
           <div className="news-feed">
