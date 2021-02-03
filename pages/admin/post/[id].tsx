@@ -1,9 +1,14 @@
 import { getSession } from "next-auth/client";
 import { useEffect } from "react";
 import Router from "next/router";
+import dynamic from "next/dynamic";
 import type { Session } from "next-auth";
 import type { NextPageContext } from "next";
 import type { PostJson } from "utils/prop-types";
+
+const Editor = dynamic(() => import("components/Editorjs"), {
+  ssr: false,
+});
 
 type StaticPath = {
   params: {
@@ -23,7 +28,7 @@ export default function PostEditor(props: Props) {
     }
   }, [props.session]);
 
-  return props.session ? <div>{props.post.title}</div> : <div />;
+  return props.session ? <div><Editor /></div> : <div />;
 }
 
 export async function getServerSideProps(

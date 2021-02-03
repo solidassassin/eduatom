@@ -8,6 +8,10 @@
       "es2017",
       "esnext.asynciterable"
     ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "./dist",
