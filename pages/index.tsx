@@ -9,8 +9,6 @@ import {
 } from "pure-react-carousel";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import ReactMarkdown from "react-markdown";
-import { maxImg } from "utils/helpers";
 import type { PostJson } from "utils/prop-types";
 
 const Editor = dynamic(() => import("components/Editorjs"), {

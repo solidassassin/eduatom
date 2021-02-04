@@ -1,7 +1,10 @@
-import ReactMarkdown from "react-markdown";
-import { maxImg } from "utils/helpers";
+import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
 import type { NextPageContext } from "next";
+
+const Editor = dynamic(() => import("components/Editorjs"), {
+  ssr: false,
+});
 
 type Props = {
   post: PostJson;
@@ -16,10 +19,7 @@ type StaticPath = {
 export default function News(props: Props) {
   return (
     <div className="pad-title">
-      <h2>{props.post.title}</h2>
-      <ReactMarkdown renderers={{ image: maxImg }}>
-        {props.post.content}
-      </ReactMarkdown>
+      <Editor data={JSON.parse(props.post.content)} readOnly={true} />
     </div>
   );
 }
