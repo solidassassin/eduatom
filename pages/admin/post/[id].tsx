@@ -73,11 +73,11 @@ export default function PostEditor(props: Props) {
           className="new-post"
           href="/admin"
           onClick={() => {
-            if (title && content) {
-              publishPost(props.post.id);
-            }
+            publishPost(props.post.id);
           }}
-        >Publikuoti</a>
+        >
+          Publikuoti
+        </a>
       )}
     </div>
   ) : (
