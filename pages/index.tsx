@@ -8,9 +8,12 @@ import {
   Image as Cimg,
 } from "pure-react-carousel";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
-import { maxImg } from "utils/helpers";
+import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
+
+const Editor = dynamic(() => import("components/Editorjs"), {
+  ssr: false,
+});
 
 type StaticFile = {
   fileName: string;
@@ -66,10 +69,7 @@ export default function MainPage(props: Props) {
               {props.posts.map((post) => {
                 return (
                   <div className="column2">
-                    <h2>{post.title}</h2>
-                    <ReactMarkdown renderers={{ image: maxImg }}>
-                      {post.content}
-                    </ReactMarkdown>
+                    <Editor data={JSON.parse(post.content)} readOnly={true} />
                   </div>
                 );
               })}

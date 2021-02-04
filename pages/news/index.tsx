@@ -1,6 +1,9 @@
-import ReactMarkdown from "react-markdown";
-import { maxImg } from "utils/helpers";
+import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
+
+const Editor = dynamic(() => import("components/Editorjs"), {
+  ssr: false,
+});
 
 type Props = {
   posts: PostJson[];
@@ -14,11 +17,8 @@ export default function NewsPage(props: Props) {
         return (
           <div className="news-feed">
             <a href={`news/${post.id}`}>
-              <h2>{post.title}</h2>
+              <Editor data={JSON.parse(post.content)} readOnly={true}/>
             </a>
-            <ReactMarkdown renderers={{ image: maxImg }}>
-              {post.content}
-            </ReactMarkdown>
             <p className="flow"></p>
           </div>
         );
