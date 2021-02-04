@@ -60,7 +60,6 @@ export default function PostEditor(props: Props) {
         onClick={() => {
           if (title && content) {
             editPost(props.post.id, title, JSON.stringify(content));
-            Router.push("/admin");
           } else {
             alert("Pakeitimų nėra");
           }

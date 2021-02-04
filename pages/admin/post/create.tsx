@@ -45,7 +45,6 @@ export default function PostEditor(props: Props) {
         onClick={() => {
           if (title && content) {
             createPost(title, JSON.stringify(content));
-            Router.push("/admin");
           } else {
             alert("Nėra medžiagos");
           }
