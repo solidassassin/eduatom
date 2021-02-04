@@ -57,10 +57,12 @@ export default function PostEditor(props: Props) {
       />
       <a
         className="new-post"
-        href="/admin"
         onClick={() => {
           if (title && content) {
             editPost(props.post.id, title, JSON.stringify(content));
+            Router.push("/admin");
+          } else {
+            alert("Pakeitimų nėra");
           }
         }}
       >

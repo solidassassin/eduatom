@@ -51,6 +51,7 @@
 .new-post:hover {
   background: #66cca7;
   color: black;
+  cursor: pointer;
 }
 
 .logout {
