@@ -1,5 +1,5 @@
 import { getSession } from "next-auth/client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import type { Session } from "next-auth";
@@ -89,12 +89,14 @@ export default function PostEditor(props: Props) {
 export async function getServerSideProps(
   context: NextPageContext & StaticPath
 ) {
+  const session = await getSession(context);
+  const cookie = context.req?.headers.cookie;
+  const headers = cookie ? { cookie } : undefined;
+
   const postResponse = await fetch(
     `http://localhost:3000/api/post/${context.params.id}`,
     {
-      headers: {
-        cookie: context.req?.headers.cookie!,
-      },
+      headers,
     }
   );
   const post = await postResponse.json();
@@ -102,7 +104,7 @@ export async function getServerSideProps(
   return {
     props: {
       post,
-      session: await getSession(context),
+      session,
     },
   };
 }

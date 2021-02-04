@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Navbar from "../components/Navbar";
+import React from "react";
 import {
   CarouselProvider,
   Slider,
@@ -42,7 +43,7 @@ export default function MainPage(props: Props) {
           <Slider>
             {Array.from(props.carousel.entries()).map((value) => {
               return (
-                <Slide index={value[0]}>
+                <Slide index={value[0]} key={value[0]}>
                   <Cimg
                     hasMasterSpinner={false}
                     isBgImage={true}
@@ -63,7 +64,7 @@ export default function MainPage(props: Props) {
             <div className="row2">
               {props.posts.map((post) => {
                 return (
-                  <div className="column2">
+                  <div className="column2" key={post.id}>
                     <Editor data={JSON.parse(post.content)} readOnly={true} />
                   </div>
                 );
@@ -169,7 +170,7 @@ export default function MainPage(props: Props) {
             <ul id="members">
               {props.content.map((file) => {
                 return (
-                  <li>
+                  <li key={file.fileName}>
                     <a href={file.filePath}>{file.fileName}</a>
                   </li>
                 );

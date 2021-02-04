@@ -1,3 +1,4 @@
+import React from "react";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
 import type { NextPageContext } from "next";

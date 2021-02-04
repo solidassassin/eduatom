@@ -73,12 +73,12 @@ export default function adminPage(props: Props) {
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
+  const cookie = context.req?.headers.cookie;
+  const headers = cookie ? { cookie } : undefined;
 
   const pub = await fetch("http://localhost:3000/api/feed");
   const dra = await fetch("http://localhost:3000/api/drafts", {
-    headers: {
-      cookie: context.req?.headers.cookie!,
-    },
+    headers,
   });
 
   const published = await pub.json();

@@ -1,3 +1,4 @@
+import React from "react";
 import Editor from "react-editor-js";
 import { EDITOR_JS_TOOLS } from "utils/editor-tools";
 import type { API, OutputData } from "@editorjs/editorjs";

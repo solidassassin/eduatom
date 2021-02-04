@@ -14,7 +14,7 @@ const options = {
   ],
   callbacks: {
     signIn: async (_: User, _1: Account, profile: Profile) => {
-      let isAllowedToSignIn = env.VALID_EMAILS?.split(/\s+/).includes(
+      const isAllowedToSignIn = env.VALID_EMAILS?.split(/\s+/).includes(
         profile.email || ""
       )
         ? true

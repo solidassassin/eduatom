@@ -1,5 +1,5 @@
 import { getSession } from "next-auth/client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import type { Session } from "next-auth";

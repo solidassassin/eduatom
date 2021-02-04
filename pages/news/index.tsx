@@ -1,3 +1,4 @@
+import React from "react";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
 
@@ -15,7 +16,7 @@ export default function NewsPage(props: Props) {
       <h1 style={{ textAlign: "center" }}>Naujienos</h1>
       {props.posts.map((post) => {
         return (
-          <div className="news-feed">
+          <div className="news-feed" key={post.id}>
             <a href={`news/${post.id}`} className="div-link">
               <Editor data={JSON.parse(post.content)} readOnly={true} />
             </a>
