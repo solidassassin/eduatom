@@ -53,6 +53,7 @@ export default function PostEditor(props: Props) {
           title = data?.blocks[0]?.data.text;
           content = data;
         }}
+        data={JSON.parse(props.post.content)}
       />
       <a
         className="new-post"

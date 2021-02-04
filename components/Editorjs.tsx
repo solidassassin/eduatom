@@ -4,6 +4,7 @@ import type { API, OutputData } from "@editorjs/editorjs";
 
 type Props = {
   onChange?: (api: API, data?: OutputData) => void;
+  data?: OutputData;
 };
 
 export default function EditorJS(props: Props) {
@@ -12,6 +13,7 @@ export default function EditorJS(props: Props) {
     <Editor
       tools={EDITOR_JS_TOOLS}
       onChange={props.onChange}
+      data={props.data}
     />
   );
 }
