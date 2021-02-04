@@ -1,9 +1,9 @@
-
 .navbar {
   position: fixed;
   background-color: white;
   transition: width var(--transition-speed) ease;
   overflow: hidden;
+  z-index: 20;
 }
 
 .navbar-nav {

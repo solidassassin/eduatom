@@ -16,6 +16,7 @@ export default function EditorJS(props: Props) {
       onChange={props.onChange}
       data={props.data}
       readOnly={props.readOnly}
+      autofocus={true}
     />
   );
 }

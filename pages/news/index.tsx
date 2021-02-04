@@ -12,12 +12,12 @@ type Props = {
 export default function NewsPage(props: Props) {
   return (
     <div>
-      <h1 className="pad-title">Naujienos</h1>
+      <h1 style={{ textAlign: "center" }}>Naujienos</h1>
       {props.posts.map((post) => {
         return (
           <div className="news-feed">
             <a href={`news/${post.id}`}>
-              <Editor data={JSON.parse(post.content)} readOnly={true}/>
+              <Editor data={JSON.parse(post.content)} readOnly={true} />
             </a>
             <p className="flow"></p>
           </div>

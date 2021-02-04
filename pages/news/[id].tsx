@@ -18,7 +18,7 @@ type StaticPath = {
 
 export default function News(props: Props) {
   return (
-    <div className="pad-title">
+    <div>
       <Editor data={JSON.parse(props.post.content)} readOnly={true} />
     </div>
   );
