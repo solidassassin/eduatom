@@ -88,6 +88,7 @@ h2 {
   border-width: 3px;
   height: 100%;
 }
+
 .section {
   flex-direction: column;
   border-width: 3px;
@@ -176,6 +177,12 @@ h2 {
   vertical-align: top;
   color: white;
   margin: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .comp-name {
+    margin-left: 5rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
