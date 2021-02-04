@@ -16,7 +16,7 @@ export default function NewsPage(props: Props) {
       {props.posts.map((post) => {
         return (
           <div className="news-feed">
-            <a href={`news/${post.id}`}>
+            <a href={`news/${post.id}`} className="div-link">
               <Editor data={JSON.parse(post.content)} readOnly={true} />
             </a>
             <p className="flow"></p>

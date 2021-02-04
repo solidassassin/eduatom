@@ -5,3 +5,12 @@
   max-height: 500px;
   background: linear-gradient(to bottom, transparent, white);
 }
+
+.news-feed:hover {
+  background-color: var(--bg-secondary);
+}
+
+.div-link:hover {
+  background: white;
+  color: black;
+}
