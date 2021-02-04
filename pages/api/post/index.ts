@@ -23,5 +23,4 @@ export default async function handle(
   } else {
     res.status(401).json({});
   }
-  res.end();
 }
