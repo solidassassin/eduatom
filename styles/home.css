@@ -71,7 +71,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4vmin;
+  font-size: 4vh;
   font-family: "Montserrat";
   font-weight: 500;
 }
@@ -161,15 +161,14 @@ h2 {
   right: 0;
   top: 0;
   background: transparent;
-  background: radial-gradient(farthest-side at top right, black, transparent);
-  width: 20%;
+
+
 }
 
 .eu-size {
-  width: 35%;
+  width: 40%;
   height: auto;
-  /*max-width: 20vw;*/
-  float: top;
+  float: right
 }
 
 .temp {
@@ -208,5 +207,6 @@ h2 {
   .column2 {
     padding: 1rem;
     width: 100%;
+    max-width: 90%;
   }
 }

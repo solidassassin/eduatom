@@ -54,11 +54,6 @@ export default function MainPage(props: Props) {
           </Slider>
           <div className="comp-name">Eduatom</div>
           <div className="eu-logo">
-            <p className="temp">
-              2014-2021 Operational <br /> Programme for the <br />
-              European Union Funds <br />
-              Investments in Lithuania
-            </p>
             <img className="eu-size" src="/images/eu.png" />
           </div>
         </CarouselProvider>
