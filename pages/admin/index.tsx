@@ -2,7 +2,7 @@ import React from "react";
 import { getSession, signOut } from "next-auth/client";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import type { NextPageContext } from "next";
+import type { GetServerSideProps } from "next";
 import type { Session } from "next-auth/client";
 import type { PostJson } from "utils/prop-types";
 
@@ -35,7 +35,7 @@ function displayPost(post: PostJson) {
   );
 }
 
-export default function adminPage(props: Props) {
+const AdminPage: React.FC<Props> = (props: Props) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -69,9 +69,11 @@ export default function adminPage(props: Props) {
   ) : (
     <div />
   );
-}
+};
 
-export async function getServerSideProps(context: NextPageContext) {
+export default AdminPage;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context);
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
@@ -91,4 +93,4 @@ export async function getServerSideProps(context: NextPageContext) {
       session,
     },
   };
-}
+};

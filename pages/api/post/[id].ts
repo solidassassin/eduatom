@@ -3,10 +3,10 @@ import formatResponse from "utils/response";
 import { getSession, Session } from "next-auth/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handle(
+export default async (
   req: NextApiRequest,
   res: NextApiResponse
-) {
+): Promise<void> => {
   const session = await getSession({ req });
   const postId = Number(req.query.id);
 
@@ -26,7 +26,7 @@ export default async function handle(
       `The HTTP ${req.method} method is not supported at this route.`
     );
   }
-}
+};
 
 // GET /api/post/:id
 async function handleGet(

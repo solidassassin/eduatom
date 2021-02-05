@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
+import {GetStaticProps} from "next";
 
 const Editor = dynamic(() => import("components/Editorjs"), {
   ssr: false,
@@ -28,7 +29,7 @@ type Props = {
   posts: PostJson[];
 };
 
-export default function MainPage(props: Props) {
+const MainPage: React.FC<Props> = (props: Props) => {
   return (
     <div>
       <div className="page">
@@ -188,6 +189,8 @@ export default function MainPage(props: Props) {
   );
 }
 
+export default MainPage;
+
 function getPath(...folder: string[]) {
   return path.join(process.cwd(), "public", ...folder);
 }
@@ -203,7 +206,7 @@ function getFiles(...folder: string[]) {
   });
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const carousel = getFiles("images", "carousel");
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");

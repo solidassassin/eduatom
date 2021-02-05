@@ -7,7 +7,7 @@ import React from "react";
 import { Provider } from "next-auth/client";
 import type { AppProps } from "next/dist/next-server/lib/router/router";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider session={pageProps.session}>
       <Component {...pageProps} />

@@ -8,8 +8,8 @@ import type { Profile } from "next-auth/adapters";
 const options = {
   providers: [
     Providers.Google({
-      clientId: env.GOOGLE_ID!,
-      clientSecret: env.GOOGLE_SECRET!,
+      clientId: env.GOOGLE_ID ?? "",
+      clientSecret: env.GOOGLE_SECRET ?? "",
     }),
   ],
   callbacks: {
@@ -23,9 +23,7 @@ const options = {
       return Promise.resolve(isAllowedToSignIn);
     },
   },
-
-  //database: process.env.DATABASE_URL,
 };
 
-export default (req: NextApiRequest, res: NextApiResponse) =>
+export default (req: NextApiRequest, res: NextApiResponse): Promise<void> =>
   NextAuth(req, res, options);

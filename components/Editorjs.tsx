@@ -9,8 +9,7 @@ type Props = {
   readOnly?: boolean;
 };
 
-export default function EditorJS(props: Props) {
-
+const EditorJS: React.FC<Props> = (props: Props) => {
   return (
     <Editor
       tools={EDITOR_JS_TOOLS}
@@ -20,4 +19,6 @@ export default function EditorJS(props: Props) {
       autofocus={true}
     />
   );
-}
+};
+
+export default EditorJS;

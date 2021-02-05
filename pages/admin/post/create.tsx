@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import type { Session } from "next-auth";
-import type { NextPageContext } from "next";
+import type { GetServerSideProps } from "next";
 import type { OutputData } from "@editorjs/editorjs";
 
 const Editor = dynamic(() => import("components/Editorjs"), {
@@ -22,7 +22,7 @@ async function createPost(title: string, content: string) {
   });
 }
 
-export default function PostEditor(props: Props) {
+const PostEditor: React.FC<Props> = (props: Props) => {
   let title: string | undefined;
   let content: OutputData | undefined;
 
@@ -57,12 +57,14 @@ export default function PostEditor(props: Props) {
   ) : (
     <div />
   );
-}
+};
 
-export async function getServerSideProps(context: NextPageContext) {
+export default PostEditor;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       session: await getSession(context),
     },
   };
-}
+};

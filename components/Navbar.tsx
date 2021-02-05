@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
@@ -129,8 +129,9 @@ export default function Navbar() {
             <span className="link-text">Kontaktai</span>
           </a>
         </li>
-
       </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;

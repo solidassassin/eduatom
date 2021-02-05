@@ -5,10 +5,10 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 // POST /api/post
 // Required fields in body: title, content
-export default async function handle(
+export default async (
   req: NextApiRequest,
   res: NextApiResponse
-) {
+): Promise<void> => {
   const session = await getSession({ req });
   if (session) {
     const { title, content } = req.body;
@@ -23,4 +23,4 @@ export default async function handle(
   } else {
     res.status(401).json({});
   }
-}
+};

@@ -3,19 +3,13 @@ import React, { useEffect } from "react";
 import Router from "next/router";
 import dynamic from "next/dynamic";
 import type { Session } from "next-auth";
-import type { NextPageContext } from "next";
+import type { GetServerSideProps } from "next";
 import type { PostJson } from "utils/prop-types";
 import type { OutputData } from "@editorjs/editorjs";
 
 const Editor = dynamic(() => import("components/Editorjs"), {
   ssr: false,
 });
-
-type StaticPath = {
-  params: {
-    id: string;
-  };
-};
 
 type Props = {
   post: PostJson;
@@ -36,7 +30,7 @@ async function publishPost(id: number) {
   });
 }
 
-export default function PostEditor(props: Props) {
+const PostEditor: React.FC<Props> = (props: Props) => {
   let title: string | undefined;
   let content: OutputData | undefined;
 
@@ -84,17 +78,17 @@ export default function PostEditor(props: Props) {
   ) : (
     <div />
   );
-}
+};
 
-export async function getServerSideProps(
-  context: NextPageContext & StaticPath
-) {
+export default PostEditor;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context);
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
 
   const postResponse = await fetch(
-    `http://localhost:3000/api/post/${context.params.id}`,
+    `http://localhost:3000/api/post/${context.params?.id}`,
     {
       headers,
     }
@@ -107,4 +101,4 @@ export async function getServerSideProps(
       session,
     },
   };
-}
+};
