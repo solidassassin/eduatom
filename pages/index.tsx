@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
-import {GetStaticProps} from "next";
+import { GetServerSideProps } from "next";
 
 const Editor = dynamic(() => import("components/Editorjs"), {
   ssr: false,
@@ -187,7 +187,7 @@ const MainPage: React.FC<Props> = (props: Props) => {
       <Navbar></Navbar>
     </div>
   );
-}
+};
 
 export default MainPage;
 
@@ -206,7 +206,7 @@ function getFiles(...folder: string[]) {
   });
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const carousel = getFiles("images", "carousel");
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
@@ -221,6 +221,5 @@ export const getStaticProps: GetStaticProps = async () => {
       cvs,
       posts: posts.length > 3 ? posts.slice(0, 3) : posts,
     },
-    revalidate: 900,
   };
-}
+};
