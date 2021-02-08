@@ -15,7 +15,7 @@ type Props = {
 };
 
 async function createPost(title: string, content: string) {
-  await fetch("http://localhost:3000/api/post", {
+  await fetch("https://eduatom.eu/api/post", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content }),

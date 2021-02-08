@@ -71,7 +71,7 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 );
               })}
               <p className="flow">
-                <a className="read-more" href="http://localhost:3000/news">
+                <a className="read-more" href="/news">
                   Skaityti daugiau
                 </a>
               </p>
@@ -211,7 +211,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
 
-  const pub = await fetch("http://localhost:3000/api/feed");
+  const pub = await fetch("https://eduatom.eu/api/feed");
   const posts: PostJson[] = await pub.json();
 
   return {

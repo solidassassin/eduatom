@@ -23,7 +23,7 @@ export default News;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const postResponse = await fetch(
-    `http://localhost:3000/api/post/${context.params?.id}`
+    `https://eduatom.eu/api/post/${context.params?.id}`
   );
   const post = await postResponse.json();
 

@@ -13,7 +13,7 @@ type Props = {
 };
 
 async function alterPost(id: number, method: "PUT" | "DELETE") {
-  await fetch(`http://localhost:3000/api/post/${id}`, {
+  await fetch(`https://eduatom.eu/api/post/${id}`, {
     method,
   });
 }
@@ -78,8 +78,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
 
-  const pub = await fetch("http://localhost:3000/api/feed");
-  const dra = await fetch("http://localhost:3000/api/drafts", {
+  const pub = await fetch("https://eduatom.eu/api/feed");
+  const dra = await fetch("https://eduatom.eu/api/drafts", {
     headers,
   });
 

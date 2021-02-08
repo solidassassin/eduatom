@@ -32,7 +32,7 @@ const NewsPage: React.FC<Props> = (props: Props) => {
 export default NewsPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const pub = await fetch("http://localhost:3000/api/feed");
+  const pub = await fetch("https://eduatom.eu/api/feed");
   const posts = await pub.json();
 
   return {
