@@ -6,3 +6,6 @@ nginx/
 .dockerignore
 Dockerfile
 docker-compose.yml
+.env
+db.env
+next.env

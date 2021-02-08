@@ -7,6 +7,8 @@ services:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
   nextjs:
     build: ./
+    env_file:
+      - next.env
   nginx:
     build: ./nginx
     ports:
