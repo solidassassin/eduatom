@@ -1,4 +1,5 @@
 import React from "react";
+import { env } from "process";
 import { getSession, signOut } from "next-auth/client";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -78,8 +79,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
 
-  const pub = await fetch("https://eduatom.eu/api/feed");
-  const dra = await fetch("https://eduatom.eu/api/drafts", {
+  const pub = await fetch(`${env.DOMAIN}/api/feed`);
+  const dra = await fetch(`${env.DOMAIN}/api/drafts`, {
     headers,
   });
 

@@ -1,3 +1,4 @@
+import { env } from "process";
 import { getSession } from "next-auth/client";
 import React, { useEffect } from "react";
 import Router from "next/router";
@@ -15,7 +16,7 @@ type Props = {
 };
 
 async function createPost(title: string, content: string) {
-  await fetch("https://eduatom.eu/api/post", {
+  await fetch(`${env.DOMAIN}/api/post`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content }),

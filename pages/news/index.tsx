@@ -1,3 +1,4 @@
+import { env } from "process";
 import React from "react";
 import dynamic from "next/dynamic";
 import { GetServerSideProps } from "next";
@@ -32,7 +33,7 @@ const NewsPage: React.FC<Props> = (props: Props) => {
 export default NewsPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const pub = await fetch("https://eduatom.eu/api/feed");
+  const pub = await fetch(`${env.DOMAIN}/api/feed`);
   const posts = await pub.json();
 
   return {

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { env } from "process";
 import Navbar from "../components/Navbar";
 import React from "react";
 import {
@@ -211,7 +212,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
 
-  const pub = await fetch("https://eduatom.eu/api/feed");
+  const pub = await fetch(`${env.DOMAIN}/api/feed`);
   const posts: PostJson[] = await pub.json();
 
   return {
