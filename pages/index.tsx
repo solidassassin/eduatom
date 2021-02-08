@@ -82,22 +82,21 @@ const MainPage: React.FC<Props> = (props: Props) => {
             <h1>Projektas</h1>
             <p className="text-post">
               <b>EDUATOM</b> projektas skirtas sukurti edukacinio ir pažintinio
-              turizmo plėtros didaktinių technohttps://pointerpointer.comlogijų
-              sprendinius remiantis Ignalinos atominės elektrinės regiono
-              branduolinio edukacinio maršruto kūrimo atveju. Tyrėjai projekte
-              siekia moksliškai pagrįsti Ignalinos atominės elektrinės regiono
-              edukacinio maršruto kūrimo didaktinius sprendimus ir technologijas
-              bei remiantis šio maršruto kūrimo atveju sustiprinti edukacinio
-              turizmo ir mokslo komunikacijos metodologinį pagrindą. Siekiama
-              moksliškai pagrįsti naują edukacinį ir mokslo komunikacijos
-              maršrutą, kuris atitiktų branduolinio/ atominio turizmo, atominių
-              muziejų, informacinių centrų ir edukacinių turistinių mokslo
-              centrų plėtojimo tendencijas. Per ataskaitinį laikotarpį buvo
-              atliekamas tyrimas siekiant atskleisti Visagino, kaip IAE
-              satelitinio miesto daugiakultūrinio identiteto potencialą
-              kūrybinėms industrijoms ir verslumui plėtoti pagrindžiant
-              šiuolaikinio edukacinio turizmo didaktinių sprendimų konstravimo
-              principus.
+              turizmo plėtros didaktinių technologijų sprendinius remiantis
+              Ignalinos atominės elektrinės regiono branduolinio edukacinio
+              maršruto kūrimo atveju. Tyrėjai projekte siekia moksliškai
+              pagrįsti Ignalinos atominės elektrinės regiono edukacinio maršruto
+              kūrimo didaktinius sprendimus ir technologijas bei remiantis šio
+              maršruto kūrimo atveju sustiprinti edukacinio turizmo ir mokslo
+              komunikacijos metodologinį pagrindą. Siekiama moksliškai pagrįsti
+              naują edukacinį ir mokslo komunikacijos maršrutą, kuris atitiktų
+              branduolinio/ atominio turizmo, atominių muziejų, informacinių
+              centrų ir edukacinių turistinių mokslo centrų plėtojimo
+              tendencijas. Per ataskaitinį laikotarpį buvo atliekamas tyrimas
+              siekiant atskleisti Visagino, kaip IAE satelitinio miesto
+              daugiakultūrinio identiteto potencialą kūrybinėms industrijoms ir
+              verslumui plėtoti pagrindžiant šiuolaikinio edukacinio turizmo
+              didaktinių sprendimų konstravimo principus.
             </p>
             <p>
               <b>Projekto tikslas</b> - sukurti edukacinio ir pažintinio turizmo

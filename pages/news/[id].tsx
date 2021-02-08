@@ -2,6 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
 import type { GetServerSideProps } from "next";
+import { env } from "process";
 
 const Editor = dynamic(() => import("components/Editorjs"), {
   ssr: false,
@@ -23,7 +24,7 @@ export default News;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const postResponse = await fetch(
-    `https://eduatom.eu/api/post/${context.params?.id}`
+    `${env.DOMAIN}/api/post/${context.params?.id}`
   );
   const post = await postResponse.json();
 

@@ -17,7 +17,7 @@ type Props = {
 };
 
 async function editPost(id: number, title: string, content: string) {
-  await fetch(`https://eduatom.eu/api/post/${id}`, {
+  await fetch(`${env.DOMAIN}/api/post/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content }),
@@ -25,7 +25,7 @@ async function editPost(id: number, title: string, content: string) {
 }
 
 async function publishPost(id: number) {
-  await fetch(`https://eduatom.eu/api/publish/${id}`, {
+  await fetch(`${env.DOMAIN}/api/publish/${id}`, {
     method: "PUT",
   });
 }
@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const headers = cookie ? { cookie } : undefined;
 
   const postResponse = await fetch(
-    `https://eduatom.eu/api/post/${context.params?.id}`,
+    `${env.DOMAIN}/api/post/${context.params?.id}`,
     {
       headers,
     }

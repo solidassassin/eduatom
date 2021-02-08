@@ -14,7 +14,7 @@ type Props = {
 };
 
 async function alterPost(id: number, method: "PUT" | "DELETE") {
-  await fetch(`https://eduatom.eu/api/post/${id}`, {
+  await fetch(`${env.DOMAIN}/api/post/${id}`, {
     method,
   });
 }
