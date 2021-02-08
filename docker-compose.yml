@@ -1,4 +1,10 @@
 services:
+  db:
+    image: postgres
+    env_file:
+      - db.env
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
   nextjs:
     build: ./
   nginx:
