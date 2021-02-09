@@ -35,8 +35,8 @@ const MainPage: React.FC<Props> = (props: Props) => {
     <div>
       <div className="page">
         <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={55}
+          naturalSlideWidth={1920}
+          naturalSlideHeight={1280}
           totalSlides={3}
           className="parent"
           interval={3000}
