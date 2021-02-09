@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn install
+      - name: Run ESLint
+        run: yarn run eslint .
+  update:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Executing commands in remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd app/eduatom/
+            git pull origin master
+            docker-compose up -d --build
