@@ -24,7 +24,6 @@ type StaticFile = {
 };
 
 type Props = {
-  carousel: StaticFile[];
   content: StaticFile[];
   cvs: StaticFile[];
   posts: PostJson[];
@@ -43,17 +42,27 @@ const MainPage: React.FC<Props> = (props: Props) => {
           isPlaying={true}
         >
           <Slider>
-            {Array.from(props.carousel.entries()).map((value) => {
-              return (
-                <Slide index={value[0]} key={value[0]}>
-                  <Cimg
-                    hasMasterSpinner={false}
-                    isBgImage={true}
-                    src={value[1].filePath}
-                  ></Cimg>
-                </Slide>
-              );
-            })}
+            <Slide index={0}>
+              <Cimg
+                hasMasterSpinner={false}
+                isBgImage={true}
+                src="/images/carousel/gauge.jpg"
+              ></Cimg>
+            </Slide>
+            <Slide index={1}>
+              <Cimg
+                hasMasterSpinner={false}
+                isBgImage={true}
+                src="/images/carousel/meters.jpg"
+              ></Cimg>
+            </Slide>
+            <Slide index={2}>
+              <Cimg
+                hasMasterSpinner={false}
+                isBgImage={true}
+                src="/images/carousel/reactor.jpg"
+              ></Cimg>
+            </Slide>
           </Slider>
           <div className="comp-name">Eduatom</div>
           <div className="eu-logo">
@@ -67,7 +76,9 @@ const MainPage: React.FC<Props> = (props: Props) => {
               {props.posts.map((post) => {
                 return (
                   <div className="column2" key={post.id}>
-                    <Editor data={JSON.parse(post.content)} readOnly={true} />
+                    <a href={`/news/${post.id}`} className="div-link">
+                      <Editor data={JSON.parse(post.content)} readOnly={true} />
+                    </a>
                   </div>
                 );
               })}
@@ -253,7 +264,6 @@ function getFiles(...folder: string[]) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const carousel = getFiles("images", "carousel");
   const content = getFiles("material", "content");
   const cvs = getFiles("material", "cvs");
 
@@ -262,10 +272,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   return {
     props: {
-      carousel,
       content,
       cvs,
-      posts: posts.length > 3 ? posts.slice(0, 3) : posts,
+      posts: posts.length > 2 ? posts.slice(0, 2) : posts,
     },
   };
 };

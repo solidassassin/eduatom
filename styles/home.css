@@ -122,8 +122,12 @@ h2 {
   vertical-align: top;
 }
 
+.column2:hover {
+  background-color: var(--bg-secondary);
+}
+
 .row2 {
-  text-align: justify;
+  text-align: center;
   position: relative;
   max-height: 20rem;
   overflow: hidden;
