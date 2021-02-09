@@ -25,7 +25,6 @@ type StaticFile = {
 
 type Props = {
   content: StaticFile[];
-  cvs: StaticFile[];
   posts: PostJson[];
 };
 
@@ -192,25 +191,13 @@ const MainPage: React.FC<Props> = (props: Props) => {
           <div className="section" id="team">
             <h1>Komanda</h1>
             <div className="row">
-              <div className="column">
-                <a href="/material/cvs/sm.pdf">
-                  <h2>Saulius Mickevičius</h2>
+            <div className="column">
+                <a href="/material/cvs/nm.pdf">
+                  <h2>Natalija Mažeikienė</h2>
                 </a>
                 <Image
                   className="c-img"
-                  src="/images/team/sm.jpg"
-                  width={800}
-                  height={600}
-                  objectFit="contain"
-                ></Image>
-              </div>
-              <div className="column">
-                <a href="/material/cvs/it.pdf">
-                  <h2>Ilona Tandzelgoskienė</h2>
-                </a>
-                <Image
-                  className="c-img"
-                  src="/images/team/it.jpg"
+                  src="/images/team/nm.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
@@ -229,16 +216,55 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 ></Image>
               </div>
               <div className="column">
-                <a href="/material/cvs/nm.pdf">
-                  <h2>Natalija Mažeikienė</h2>
+                <a href="/material/cvs/it.pdf">
+                  <h2>Ilona Tandzelgoskienė</h2>
                 </a>
                 <Image
                   className="c-img"
-                  src="/images/team/nm.jpg"
+                  src="/images/team/it.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
                 ></Image>
+              </div>
+              <div className="column">
+                <a href="/material/cvs/sm.pdf">
+                  <h2>Saulius Mickevičius</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/sm.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
+              </div>
+              <div className="column">
+                <h2>Judita Kasperiūnienė</h2>
+              </div>
+              <div className="column">
+                <h2>Eglė Gerulaitienė</h2>
+              </div>
+              <div className="column">
+                <h2>Ineta Dabašinkienė</h2>
+              </div>
+              <div className="column">
+                <h2>Odeta Norkutė</h2>
+              </div>
+              <div className="column">
+                <h2>Lina Kaminskienė</h2>
+              </div>
+              <div className="column">
+                <h2>Genovaitė Kynė</h2>
+              </div>
+              <div className="column">
+                <h2>Kristina Juraitė</h2>
+              </div>
+              <div className="column">
+                <h2>Ina Žurkuvienė</h2>
+              </div>
+              <div className="column">
+                <h2>Vida Montvydaitė</h2>
               </div>
             </div>
           </div>
@@ -257,7 +283,9 @@ const MainPage: React.FC<Props> = (props: Props) => {
           </div>
           <div className="section" id="contact">
             <h1 className="title-post">Kontaktai</h1>
-            <p className="text-post">Pildyti čia</p>
+            <a href="mailto: egle.gerulaitiene@vdu.lt">
+              <h2>egle.gerulaitiene@vdu.lt</h2>
+            </a>
           </div>
         </div>
       </div>
@@ -285,7 +313,6 @@ function getFiles(...folder: string[]) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const content = getFiles("material", "content");
-  const cvs = getFiles("material", "cvs");
 
   const pub = await fetch(`${env.DOMAIN}/api/feed`);
   const posts: PostJson[] = await pub.json();
@@ -293,7 +320,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       content,
-      cvs,
       posts: posts.length > 2 ? posts.slice(0, 2) : posts,
     },
   };

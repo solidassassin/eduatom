@@ -116,7 +116,7 @@ h2 {
 
 .column {
   display: inline-block;
-  width: 30%;
+  width: 40%;
   padding-right: 2rem;
   text-align: center;
 }
@@ -200,6 +200,10 @@ h2 {
 @media only screen and (max-width: 600px) {
   main {
     margin: 0;
+  }
+
+  h2 {
+    font-size: 3vh;
   }
 
   .column {
