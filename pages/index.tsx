@@ -289,18 +289,22 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </li>
               <br />
               <li>
-                Mazeikiene, N., Kasperiūnienė, J., Tandzegolskienė, I. (2021)
-                Framing Nuclearity: Online media Discourses in Lithuania.{" "}
-                <i>Media and Communication,</i> 9(2), DOI:
-                10.17645/mac.v9i2.3818 [Web of Science; Scopus]
+                <a href="/material/content/framing-nuclearity-2.pdf">
+                  Mazeikiene, N., Kasperiūnienė, J., Tandzegolskienė, I. (2021)
+                  Framing Nuclearity: Online media Discourses in Lithuania.{" "}
+                  <i>Media and Communication,</i> 9(2), DOI:
+                  10.17645/mac.v9i2.3818 [Web of Science; Scopus]
+                </a>
               </li>
               <br />
               <li>
-                Mažeikienė, N., Kasperiūnienė, J., Tandzegolskienė, I. (2019).
-                Nuclear media discourses after the closure of the Ignalina
-                Nuclear Power Plant: is the game over?{" "}
-                <i>Central European Journal of Communication.</i> ISSN
-                1899-5101, 2019, Vol. 12, no. 3, p. 335-360. [Scopus].
+                <a href="/material/content/nuclear-media-3.pdf">
+                  Mažeikienė, N., Kasperiūnienė, J., Tandzegolskienė, I. (2019).
+                  Nuclear media discourses after the closure of the Ignalina
+                  Nuclear Power Plant: is the game over?{" "}
+                  <i>Central European Journal of Communication.</i> ISSN
+                  1899-5101, 2019, Vol. 12, no. 3, p. 335-360. [Scopus].
+                </a>
               </li>
               <br />
               <li>
@@ -311,10 +315,12 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </li>
               <br />
               <li>
-                Tandzegolskiene, I. and Kasperiuniene, J. (2020) Smart learning
-                environments in a contemporary museum: a case study.{" "}
-                <i>Journal of Education Culture and Society,</i> 11(2), 353-375.
-                ISSN2081-1640 [Web of Science]
+                <a href="/material/content/smart-learning-5.pdf">
+                  Tandzegolskiene, I. and Kasperiuniene, J. (2020) Smart
+                  learning environments in a contemporary museum: a case study.{" "}
+                  <i>Journal of Education Culture and Society,</i> 11(2),
+                  353-375. ISSN2081-1640 [Web of Science]
+                </a>
               </li>
               <br />
               <li>
@@ -326,50 +332,58 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </li>
               <br />
               <li>
-                Mažeikienė N. and Gerulaitienė E. (2018). Commodification of
-                Cultural Identities and/or empowerment of local communities:
-                developing a route of nuclear tourism‘ konferencijoje
-                &quot;Society, integration, education = Sabiedrība, integrācija,
-                izglītība&quot;.
-                <i>
-                  Sabiedrība, integrācija, izglītība: starptautiskās zinātniskās
-                  konferences materiāli,
-                </i>{" "}
-                Rēzekne = Society, integration, education: proceedings of the
-                international scientifical conference, Rezekne. Rēzekne :
-                Rēzeknes Augstskola, 145-158.
+                <a href="/material/content/commodification-7.pdf">
+                  Mažeikienė N. and Gerulaitienė E. (2018). Commodification of
+                  Cultural Identities and/or empowerment of local communities:
+                  developing a route of nuclear tourism‘ konferencijoje
+                  &quot;Society, integration, education = Sabiedrība,
+                  integrācija, izglītība&quot;.
+                  <i>
+                    Sabiedrība, integrācija, izglītība: starptautiskās
+                    zinātniskās konferences materiāli,
+                  </i>{" "}
+                  Rēzekne = Society, integration, education: proceedings of the
+                  international scientifical conference, Rezekne. Rēzekne :
+                  Rēzeknes Augstskola, 145-158.
+                </a>
               </li>
               <br />
               <li>
-                Mažeikienė N., Gerulaitienė E. (2018). Educational aspects of
-                nuclear tourism: sites, objects and museums. EDULEARN 2018: 10th
-                International conference on education and new learning
-                technologies, Jul 2-4, 2018, Palma, Spain: conference
-                proceedings. ISBN 9788409027095 p. 5692-5702. [Conference
-                Proceedings Citation Index- Social Science & Humanities (Web of
-                Science)]
+                <a href="/material/content/education-nuclear-8.pdf">
+                  Mažeikienė N., Gerulaitienė E. (2018). Educational aspects of
+                  nuclear tourism: sites, objects and museums. EDULEARN 2018:
+                  10th International conference on education and new learning
+                  technologies, Jul 2-4, 2018, Palma, Spain: conference
+                  proceedings. ISBN 9788409027095 p. 5692-5702. [Conference
+                  Proceedings Citation Index- Social Science & Humanities (Web
+                  of Science)]
+                </a>
               </li>
               <br />
               <li>
-                Kasperiūnienė, J. and Norkutė, O. (2018). Common facets of
-                museum virtual self - presentation: experimenting with
-                interactive image and text // Society, integration, education :
-                proceedings of the international scientific conference, May
-                25th-26th, 2018 = Sabiedrība, integrācija, izglītība:
-                starptautiskās zinātniskās konferences materiāli, 2018.gada
-                25.-26.maijs Rēzekne: Rēzeknes Tehnoloģiju akadēmija. ISSN
-                1691-5887. 2018, Vol. 5, p. 304-314 [Conference Proceedings
-                Citation Index (Web of Science)].
+                <a href="/material/content/">
+                  Kasperiūnienė, J. and Norkutė, O. (2018). Common facets of
+                  museum virtual self - presentation: experimenting with
+                  interactive image and text // Society, integration, education
+                  : proceedings of the international scientific conference, May
+                  25th-26th, 2018 = Sabiedrība, integrācija, izglītība:
+                  starptautiskās zinātniskās konferences materiāli, 2018.gada
+                  25.-26.maijs Rēzekne: Rēzeknes Tehnoloģiju akadēmija. ISSN
+                  1691-5887. 2018, Vol. 5, p. 304-314 [Conference Proceedings
+                  Citation Index (Web of Science)].
+                </a>
               </li>
               <br />
               <li>
-                Mažeikienė N., Norkutė O, Tandzegolskienė. (2018). Looking for
-                edutainment at Lithuanian science museums. EDULEARN 2018
-                Conference proceedings. 10th international conference on
-                education and new learning technologies, Jul 2-4, 2018, Palma,
-                Spain: conference proceedings. ISBN 9788409027095 p. 5692-5702.
-                [Conference Proceedings Citation Index- Social Science &
-                Humanities (Web of Science)]
+                <a href="/material/content/edutaintment-10.pdf">
+                  Mažeikienė N., Norkutė O, Tandzegolskienė. (2018). Looking for
+                  edutainment at Lithuanian science museums. EDULEARN 2018
+                  Conference proceedings. 10th international conference on
+                  education and new learning technologies, Jul 2-4, 2018, Palma,
+                  Spain: conference proceedings. ISBN 9788409027095 p.
+                  5692-5702. [Conference Proceedings Citation Index- Social
+                  Science & Humanities (Web of Science)]
+                </a>
               </li>
             </ol>
             <h2>Tyrimas</h2>
