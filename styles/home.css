@@ -94,14 +94,24 @@ h2 {
   border-width: 3px;
 }
 
-.comp-name {
+.car-top {
   position: absolute;
   top: 40%;
   width: 100%;
   text-align: center;
+}
+
+.comp-name {
   font-size: 10vw;
   font-family: "Headache";
   color: white;
+}
+
+.sponsor {
+  color: white;
+  margin-left: 30%;
+  margin-right: 25%;
+  font-size: 1vw;
 }
 
 .column {
@@ -160,19 +170,18 @@ h2 {
   position: relative;
 }
 
-.eu-logo {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: transparent;
-
-
+.logos {
+  display: inline;
 }
 
 .eu-size {
-  width: 40%;
+  width: 20%;
   height: auto;
-  float: right
+}
+
+.magnus-size {
+  width: 7%;
+  height: auto;
 }
 
 .temp {
@@ -212,5 +221,9 @@ h2 {
     padding: 1rem;
     width: 100%;
     max-width: 90%;
+  }
+
+  .sponsor {
+    margin-left: 25%;
   }
 }

@@ -64,9 +64,17 @@ const MainPage: React.FC<Props> = (props: Props) => {
               ></Cimg>
             </Slide>
           </Slider>
-          <div className="comp-name">Eduatom</div>
-          <div className="eu-logo">
-            <img className="eu-size" src="/images/eu.png" />
+          <div className="car-top">
+            <div className="comp-name">Eduatom</div>
+            <p className="sponsor">
+              Projektas bendrai finansuotas iš Europos regioninės plėtros fondo
+              lėšų (projekto Nr. 01.2.2-LMT-K-718-01-0084) pagal dotacijos
+              sutartį su Lietuvos mokslo taryba (LMTLT).
+            </p>
+            <div className="logos">
+              <img className="eu-size" src="/images/eu.png"/>
+              <img className="magnus-size" src="/images/magnus.svg"/>
+            </div>
           </div>
         </CarouselProvider>
         <div className="container-main">
@@ -215,6 +223,18 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 <Image
                   className="c-img"
                   src="/images/team/ld.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
+              </div>
+              <div className="column">
+                <a href="/material/cvs/nm.pdf">
+                  <h2>Natalija Mažeikienė</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/nm.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
