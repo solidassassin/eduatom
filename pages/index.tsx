@@ -374,44 +374,24 @@ const MainPage: React.FC<Props> = (props: Props) => {
             <h2>Tyrimas</h2>
             <div>
               <p>
-                Edukacinio turizmo principai, strategijos ir technologijos
-                tiriamos ir konstruojamos EDUATOM projekte remiantis Ignalinos
-                atominės elektrinės regiono edukacinio branduolinio maršruto
-                kūrimo pavyzdžiu. Siekiama sukurti mokslinės eksperimentinės
-                plėtros (MTEP) produktą – <b>virtualų edukacinį maršrutą</b>,
-                kuris atitiktų branduolinio/ atominio turizmo, atominių muziejų,
-                informacinių centrų ir edukacinių mokslo centrų plėtojimo
-                tendencijas. Kuriant maršrutą taikomi inovatyvūs edukaciniai ir
-                didaktiniai principai bei technologijos – suartinamas rengiamo
-                branduolinio turizmo maršruto turinys su formaliojo ugdymo
-                turiniu (fizikos, geografijos, istorijos dalykais), taikomi
-                edukacinio turizmo ir pramoginės edukacijos (edutainment),
-                medijų ir skaitmeninės pedagogikos (digital pedagogy) principai,
-                bus pritaikyti dalyvavimo, interaktyvumo, pramogos,
-                personalizavimo ir diferencijavimo sprendimai. Maršrutas bus
-                išbandytas su tikslinėmis grupėmis – moksleivių, skirtingų
-                amžiaus grupių moksleivių, šeimų, suaugusiųjų ir senjorų,
-                atskirai užsieniečių grupėmis (bendrai apie 300 tyrimo dalyvių).
+                Tyrėjai atlieka šiuos <b>mokslinius tyrimus</b>:
               </p>
-              <p>
-                Projekto EDUATOM metu bus sukurtas ir moksliškai pagrįstas
-                mokslinės eksperimentinės plėtros (MTEP) produktas –{" "}
-                <b>nuotolinio mokymosi Moodle kursas</b> apie didaktinius
-                edukacinio turizmo principus. Kursas skirtas muziejų ir turizmo
-                sektoriaus specialistams.
-              </p>
-              <p>
-                Projekto EDUATOM mokslininkai-tyrėjai rengia{" "}
-                <b>
-                  aukšto tarptautinio lygio mokslines publikacijas, išleistas
-                  Scopus ir Web of Science duomenų bazėse (bus parengta 14
-                  straipsnių), 2 tarptautines monografijas
-                </b>
-                , išleistas tarptautinį pripažinimą turinčiose leidyklose,{" "}
-                <b>sintetinį mokslinį darbą</b> ir atlieka{" "}
-                <b>mokslinius tyrimus</b>:
-              </p>
-              <ol>
+              <ul>
+                <li>
+                  Kokybinis tyrimas (veiklos tyrimas ir etnografinis tyrimas)
+                  apie Visagino miesto ir IAE regiono identitetą, atskleidžiant
+                  socialinį ir kultūrinį kontekstą, branduolinio turizmo
+                  plėtojimo galimybes. Atliekant kokybinį tyrimą apie Visagino
+                  miesto ir IAE regiono identitetą atlikti{" "}
+                  <b>daugiau nei 30 individualių ir grupinių interviu</b> su
+                  ekspertais, Visagino bendruomenės nariais (Visagino
+                  savivaldybės atstovai, miesto administracija, turizmo
+                  plėtotojai, IAE vadovybė ir specialistai, gyventojais), miesto
+                  ir šalies menininkais, radiacinės fizikos ir medicinos
+                  mokslininkais, verslininkais, viešojo administravimo
+                  atstovais, t.t.).
+                </li>
+                <br />
                 <li>
                   Atominio/branduolinio turizmo, industrinio paveldo objektų ir
                   maršrutų edukacinio potencialo analizė (iki 2020 m. kovo mėn.
@@ -424,41 +404,30 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   </b>
                   ).
                 </li>
+                <br />
                 <li>
                   Lietuvos ir užsienio muziejų ekspozicijų, atominių elektrinių
-                  analizė, jų tinklalapių analizė (iki 2020 m. kovo parengta{" "}
-                  <b>19 ekspozicijų analizė</b>, kuri integruota į mokslines
-                  publikacijas ir rengiamo virtualaus maršruto turinį bei Moodle
-                  nuotolinį kursą muziejų ir turizmo specialistams).
+                  analizė, jų tinklalapių analizė (
+                  <b>iki 2020 m. kovo parengta 19 ekspozicijų analizė</b>, kuri
+                  integruota į mokslines publikacijas ir rengiamo virtualaus
+                  maršruto turinį bei Moodle nuotolinį kursą muziejų ir turizmo
+                  specialistams).
                 </li>
+                <br />
                 <li>
-                  Kokybinis tyrimas (veiklos tyrimas ir etnografinis tyrimas)
-                  apie Visagino miesto ir IAE regiono identitetą, atskleidžiant
-                  socialinį ir kultūrinį kontekstą, branduolinio turizmo
-                  plėtojimo galimybes. Atliekant kokybinį tyrimą apie Visagino
-                  miesto ir IAE regiono identitetą{" "}
-                  <b>
-                    atlikti daugiau nei 30 individualių ir grupinių interviu
-                  </b>{" "}
-                  su ekspertais, Visagino bendruomenės nariais (Visagino
-                  savivaldybės atstovai, miesto administracija, turizmo
-                  plėtotojai, IAE vadovybė ir specialistai, gyventojais), miesto
-                  ir šalies menininkais, radiacinės fizikos ir medicinos
-                  mokslininkais, verslininkais, viešojo administravimo
-                  atstovais, t.t.).
-                </li>
-                <li>
-                  Kokybinė ir kiekybinė branduolinių diskursų 2017-2020 metais
+                  Kokybinė ir kiekybinė branduolinių diskursų 2018-2020 metais
                   analizė (išanalizuoti <b>4 Lietuvos dienraščių portalų</b>{" "}
                   (LRT, Delfi, 15 min, Lrytas) virš{" "}
                   <b>700 straipsnių apie IAE, Visaginą, atominę energetiką</b>{" "}
                   taikant kritinę diskurso analizę, kiekybinę socialinių tinklų
                   analizę.
                 </li>
+                <br />
                 <li>
                   <b>10 meno projektų</b>, susijusių su Visagino miestu ir
                   gyvenimu, atominio miesto identitetu, kokybinė analizė.
                 </li>
+                <br />
                 <li>
                   Bendrojo ugdymo mokyklos ugdymo turinio,{" "}
                   <b>
@@ -466,13 +435,14 @@ const MainPage: React.FC<Props> = (props: Props) => {
                     jungties
                   </b>{" "}
                   analizė (analizuojamas{" "}
-                  <b>geografijos, istorijos, fizikos ugdymo turinys</b>
-                  (ugdymo programos ir mokymo(si) medžiaga),{" "}
+                  <b>geografijos, istorijos, fizikos ugdymo turinys</b> (ugdymo
+                  programos ir mokymo(si) medžiaga),{" "}
                   <b>16 geografijos ir 20 istorijos vadovėlių</b> turinys) ir
                   galimybės susieti su neformaliuoju ugdymu branduolinio ir
                   industrinio turizmo objektuose,{" "}
                   <b>interviu su 10 geografijos mokytojais</b>.
                 </li>
+                <br />
                 <li>
                   <b>
                     Interviu, focus grupės ir konsultacijos su 25 ekspertais ir
@@ -480,18 +450,15 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   </b>{" "}
                   (Lietuvos muziejų darbuotojais, edukatoriais, mokytojais,
                   ekspozicijų kuratoriais, kt.) siekiant sukurti ir moksliškai
-                  išbandyti mokslinės eksperimentinės plėtros (MTEP) produktą –{" "}
-                  <b>nuotolinio mokymosi Moodle kursą</b>.
+                  išbandyti mokslinės eksperimentinės plėtros (MTEP) produktą -
+                  nuotolinio mokymosi Moodle kursą.
                 </li>
-              </ol>
-              <p>
-                Tyrimo rezultatai pristatyti{" "}
-                <b>
-                  22 parengtuose moksliniuose pranešimuose tarptautinėse
-                  mokslinėse konferencijose užsienyje ir Lietuvoje
-                </b>
-                .
-              </p>
+                <br />
+                <li>
+                  2021 metais planuojamas maršruto turinio ir edukacinių
+                  metodikų išbandymas su min. <b>350 dalyviais</b>.
+                </li>
+              </ul>
             </div>
           </div>
           <div className="section" id="contact">
