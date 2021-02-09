@@ -299,7 +299,7 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 Mažeikienė, N., Kasperiūnienė, J., Tandzegolskienė, I. (2019).
                 Nuclear media discourses after the closure of the Ignalina
                 Nuclear Power Plant: is the game over?{" "}
-                <i>// Central European Journal of Communication.</i> ISSN
+                <i>Central European Journal of Communication.</i> ISSN
                 1899-5101, 2019, Vol. 12, no. 3, p. 335-360. [Scopus].
               </li>
               <br />
@@ -328,8 +328,9 @@ const MainPage: React.FC<Props> = (props: Props) => {
               <li>
                 Mažeikienė N. and Gerulaitienė E. (2018). Commodification of
                 Cultural Identities and/or empowerment of local communities:
-                developing a route of nuclear tourism‘ konferencijoje "Society,
-                integration, education = Sabiedrība, integrācija, izglītība".
+                developing a route of nuclear tourism‘ konferencijoje
+                &quot;Society, integration, education = Sabiedrība, integrācija,
+                izglītība&quot;.
                 <i>
                   Sabiedrība, integrācija, izglītība: starptautiskās zinātniskās
                   konferences materiāli,
