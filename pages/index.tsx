@@ -123,6 +123,52 @@ const MainPage: React.FC<Props> = (props: Props) => {
               nuclear museums), informacinių centrų ir edukacinių turistinių
               mokslo centrų (Science Centre) plėtojimo tendencijas.
             </p>
+            <div>
+              <h2>Projekte suplanuoti 3 uždaviniai:</h2>
+              <ul>
+                <li>
+                  Atskleisti Visagino, kaip IAE satelitinio miesto
+                  daugiakultūrinio identiteto potencialą kūrybinėms industrijoms
+                  ir verslumui plėtoti pagrindžiant šiuolaikinio edukacinio
+                  turizmo didaktinių sprendimų konstravimo principus.
+                  Įgyvendinant šį uždavinį didžiausias dėmesys buvo skiriamas
+                  1.1. veiklai – Edukacinio turizmo, mokslo ir kultūros
+                  komunikacijos didaktinių sprendimų tyrimui. Tyrėjų komanda
+                  dalyvavo 20 vietinių išvykų į Visaginą, IAE ir kitus regionus
+                  renkant duomenis mokslo straipsniams, konferencijų pranešimams
+                  ir monografijai. Taip pat buvo vykdomos užsienio mokslinės
+                  išvykos į mokslo centrus, atomines, muziejus, renkant
+                  informaciją ir gerąją patirtį, kurią siekiama panaudoti
+                  Ignalinos regionui ir Visagino miesto turizmui plėtoti. Per
+                  planuotus įgyvendinti užsaviniui 2 metus, tyrėjų komanda
+                  parengė 6 mokslines publikacijas, dalyvauta 5 tarptautinėse
+                  konferencijose ir perskaityti daugiau nei 10 mokslinių
+                  pranešimų, parengta 1 monografija.
+                </li>
+                <br />
+                <li>
+                  Identifikuoti prielaidas ir pateikti sprendimus edukaciniam
+                  turizmui Lietuvoje ir branduolinio turizmo plėtrai IAE
+                  regione, remiantis pramoginės edukacijos principais.
+                  Įgyvendinant šį uždavinį didžiausias dėmesys skiriamas 2.1.
+                  veiklai – Branduolinio turizmo plėtros IAE regione mokslinis
+                  tyrimas. Tyrėjų komanda vykdo kiek Covid-19 situacija leidžia
+                  vietines mokslines išvykas renkant duomenis monografijai ir
+                  straipniams, pristatyti 6 žodiniai pranešimai, užsienyje ir
+                  Lietuvoje, rengiamas nuotolinis mokymosi kursas ir sintetinis
+                  mokslo darbas.
+                </li>
+                <br />
+                <li>
+                  Sukurti ir ištirti inovatyvaus pagrįsto virtualiomis
+                  informacinėmis technologijomis branduolinės edukacijos
+                  maršruto sprendimus turinčius komercinimo galimybes Sukurtos
+                  žinios ir edukaciniai ir technologiniai sprendimai,
+                  pasitarnaus kuriant IAE regiono naują identitetą ir naują
+                  vaidmenį - plėtoti edukacinį ir pažintinį turizmą.
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="section" id="team">
             <h1>Komanda</h1>
