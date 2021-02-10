@@ -91,94 +91,42 @@ const MainPage: React.FC<Props> = (props: Props) => {
           <div className="section" id="project">
             <h1>Projektas</h1>
             <p className="text-post">
-              <b>EDUATOM</b> projektas skirtas sukurti edukacinio ir pažintinio
-              turizmo plėtros didaktinių technologijų sprendinius remiantis
-              Ignalinos atominės elektrinės regiono branduolinio edukacinio
-              maršruto kūrimo atveju. Tyrėjai projekte siekia moksliškai
-              pagrįsti Ignalinos atominės elektrinės regiono edukacinio maršruto
-              kūrimo didaktinius sprendimus ir technologijas bei remiantis šio
-              maršruto kūrimo atveju sustiprinti edukacinio turizmo ir mokslo
-              komunikacijos metodologinį pagrindą. Siekiama moksliškai pagrįsti
-              naują edukacinį ir mokslo komunikacijos maršrutą, kuris atitiktų
-              branduolinio/ atominio turizmo, atominių muziejų, informacinių
-              centrų ir edukacinių turistinių mokslo centrų plėtojimo
-              tendencijas. Per ataskaitinį laikotarpį buvo atliekamas tyrimas
-              siekiant atskleisti Visagino, kaip IAE satelitinio miesto
-              daugiakultūrinio identiteto potencialą kūrybinėms industrijoms ir
-              verslumui plėtoti pagrindžiant šiuolaikinio edukacinio turizmo
-              didaktinių sprendimų konstravimo principus.
+              <b>Mokslinis EDUATOM projektas</b> skirtas sukurti edukacinio ir
+              pažintinio turizmo plėtros didaktinius sprendimus Lietuvos
+              muziejams, turizmo paslaugų plėtotojams, švietimo ir ugdymo
+              institucijoms, kurios vykdo neformalųjį ir formalųjį ugdymą,
+              kultūros ir mokslo komunikaciją.
             </p>
             <p>
-              <b>Projekto tikslas</b> - sukurti edukacinio ir pažintinio turizmo
-              plėtros didaktinių technologijų sprendinius remiantis Ignalinos
-              atominės elektrinės regiono branduolinio edukacinio maršruto
-              kūrimo atveju. Projekto paskirtis – moksliškai pagrįsti Ignalinos
-              atominės elektrinės (IAE) regiono edukacinio maršruto kūrimo
-              didaktinius sprendimus ir technologijas bei remiantis šio maršruto
-              kūrimo atveju sustiprinti edukacinio turizmo (educational tourism
-              - ET) ir mokslo komunikacijos metodologinį pagrindą. Pasaulinė
-              praktika rodo, kad įvairiose šalyse kiekvienas didesnis muziejus
-              ar turizmo objektas turi moksliškai pagrįstą edukacinę programą,
-              priemones, metodikas, technologijas, parengtus specialistus
-              programų realizavimui, nuolat atliekami tyrimai. Projektas siekia
-              spręsti platesnius ET plėtojimo iššūkius, kita vertus spręsdamas
-              šią platesnę problemą koncentruojasi į konkretaus ET objekto
-              atvejį – pažintinio ir edukacinio Ignalinos Atominės Elektrinės
-              (IAE) regiono branduolinio maršruto kūrimo mokslinį pagrindimą.
+              Edukacinio turizmo principai, strategijos ir technologijos
+              tiriamos ir konstruojamos EDUATOM projekte remiantis Ignalinos
+              atominės elektrinės regiono edukacinio branduolinio/atominio
+              maršruto kūrimo pavyzdžiu. Siekiama sukurti mokslinės
+              eksperimentinės plėtros (MTEP) produktą –{" "}
+              <b>virtualų edukacinį maršrutą</b>, kuris atitiktų branduolinio/
+              atominio turizmo, atominių muziejų, informacinių centrų ir
+              edukacinių mokslo centrų plėtros tendencijas.
             </p>
             <p>
-              Siekiama moksliškai pagrįsti naują edukacinį ir mokslo
-              komunikacijos maršrutą, kuris atitiktų branduolinio/ atominio
-              turizmo (nuclear/ atomic tourism), atominių muziejų (atomic/
-              nuclear museums), informacinių centrų ir edukacinių turistinių
-              mokslo centrų (Science Centre) plėtojimo tendencijas.
+              Kuriant maršrutą taikomi inovatyvūs edukaciniai ir didaktiniai
+              principai bei technologijos – suartinamas rengiamo branduolinio/
+              atominio turizmo maršruto turinys su formaliojo ugdymo turiniu
+              (fizikos, geografijos, istorijos, ekonimikos dalykais), taikomi
+              edukacinio turizmo ir pramoginės edukacijos (<i>edutainment</i>),
+              medijų ir skaitmeninės pedagogikos (<i>digital pedagogy</i>)
+              principai, bus pritaikyti dalyvavimo, interaktyvumo, pramogos,
+              personalizavimo ir diferencijavimo sprendimai. Maršrutas bus
+              išbandytas su tikslinėmis grupėmis – mokytojų, skirtingų amžiaus
+              grupių moksleivių, šeimų, suaugusiųjų ir senjorų, atskirai
+              užsieniečių grupėmis (bendrai apie 300 tyrimo dalyvių).
             </p>
-            <div>
-              <h2>Projekte suplanuoti 3 uždaviniai:</h2>
-              <ul>
-                <li>
-                  Atskleisti Visagino, kaip IAE satelitinio miesto
-                  daugiakultūrinio identiteto potencialą kūrybinėms industrijoms
-                  ir verslumui plėtoti pagrindžiant šiuolaikinio edukacinio
-                  turizmo didaktinių sprendimų konstravimo principus.
-                  Įgyvendinant šį uždavinį didžiausias dėmesys buvo skiriamas
-                  1.1. veiklai – Edukacinio turizmo, mokslo ir kultūros
-                  komunikacijos didaktinių sprendimų tyrimui. Tyrėjų komanda
-                  dalyvavo 20 vietinių išvykų į Visaginą, IAE ir kitus regionus
-                  renkant duomenis mokslo straipsniams, konferencijų pranešimams
-                  ir monografijai. Taip pat buvo vykdomos užsienio mokslinės
-                  išvykos į mokslo centrus, atomines, muziejus, renkant
-                  informaciją ir gerąją patirtį, kurią siekiama panaudoti
-                  Ignalinos regionui ir Visagino miesto turizmui plėtoti. Per
-                  planuotus įgyvendinti užsaviniui 2 metus, tyrėjų komanda
-                  parengė 6 mokslines publikacijas, dalyvauta 5 tarptautinėse
-                  konferencijose ir perskaityti daugiau nei 10 mokslinių
-                  pranešimų, parengta 1 monografija.
-                </li>
-                <br />
-                <li>
-                  Identifikuoti prielaidas ir pateikti sprendimus edukaciniam
-                  turizmui Lietuvoje ir branduolinio turizmo plėtrai IAE
-                  regione, remiantis pramoginės edukacijos principais.
-                  Įgyvendinant šį uždavinį didžiausias dėmesys skiriamas 2.1.
-                  veiklai – Branduolinio turizmo plėtros IAE regione mokslinis
-                  tyrimas. Tyrėjų komanda vykdo kiek Covid-19 situacija leidžia
-                  vietines mokslines išvykas renkant duomenis monografijai ir
-                  straipniams, pristatyti 6 žodiniai pranešimai, užsienyje ir
-                  Lietuvoje, rengiamas nuotolinis mokymosi kursas ir sintetinis
-                  mokslo darbas.
-                </li>
-                <br />
-                <li>
-                  Sukurti ir ištirti inovatyvaus pagrįsto virtualiomis
-                  informacinėmis technologijomis branduolinės edukacijos
-                  maršruto sprendimus turinčius komercinimo galimybes Sukurtos
-                  žinios ir edukaciniai ir technologiniai sprendimai,
-                  pasitarnaus kuriant IAE regiono naują identitetą ir naują
-                  vaidmenį - plėtoti edukacinį ir pažintinį turizmą.
-                </li>
-              </ul>
-            </div>
+            <p>
+              Projekto EDUATOM metu bus sukurtas ir moksliškai pagrįstas
+              mokslinės eksperimentinės plėtros (MTEP) produktas –{" "}
+              <b>nuotolinio mokymosi Moodle kursas</b> apie didaktinius
+              edukacinio turizmo principus. Kursas skirtas mokytojams, muziejų
+              ir turizmo sektoriaus specialistams.
+            </p>
           </div>
           <div className="section" id="team">
             <h1>Komanda</h1>
