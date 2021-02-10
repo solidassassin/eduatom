@@ -244,6 +244,18 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 ></Image>
               </div>
               <div className="column">
+                <a href="/material/cvs/lk.pdf">
+                  <h2>Lina Kaminskienė</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/lk.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
+              </div>
+              <div className="column">
                 <h2>Judita Kasperiūnienė</h2>
               </div>
               <div className="column">
@@ -254,11 +266,6 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </div>
               <div className="column">
                 <h2>Odeta Norkutė</h2>
-              </div>
-              <div className="column">
-                <a href="/material/cvs/lk.pdf">
-                  <h2>Lina Kaminskienė</h2>
-                </a>
               </div>
               <div className="column">
                 <h2>Genovaitė Kynė</h2>
@@ -279,6 +286,23 @@ const MainPage: React.FC<Props> = (props: Props) => {
             <h2>Mokslo publikacijos</h2>
             <ol id="members">
               <li>
+                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,{" "}
+                <i>rengiama</i>).
+                <i>Innovations in Science and Culture Commmunication</i>, Peter
+                Lang Publishing.
+              </li>
+              <br />
+              <li>
+                [Kolektyvinė monografija] N. Mažeikienė (Sud.) (2021,{" "}
+                <i>rengiama</i>).
+                <i>
+                  Edukacinis turizmas: konstruojant naująjį ugdymą už mokyklos
+                  ribų
+                </i>
+                .
+              </li>
+              <br />
+              <li>
                 [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
                 leidykloje).{" "}
                 <i>
@@ -286,6 +310,13 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   Sites,
                 </i>{" "}
                 Peter Lang Publishing.
+              </li>
+              <br />
+              <li>
+                Dovydaitytė, L. (2021, priimta spaudai). (Re)Imagining the
+                nuclear in Lithuania following the shutdown of the Ignalina
+                Nuclear Power Plant, <i>Journal of Baltic Studies</i>,
+                ISSN0162-9778 [Web of Sciences; Scopus].
               </li>
               <br />
               <li>
@@ -311,7 +342,8 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 Dabašinskienė, I., Kubiliūtė, S.. (atiduota spaudai). Language
                 competence in education: re-thinking minority issues in
                 Lithuania. Eesti Rakenduslingvistika Ühingu aastaraamat =
-                Estonian papers in applied linguistics.
+                Estonian papers in applied linguistics, [Web of Sciences;
+                Scopus].
               </li>
               <br />
               <li>
@@ -344,7 +376,8 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   </i>{" "}
                   Rēzekne = Society, integration, education: proceedings of the
                   international scientifical conference, Rezekne. Rēzekne :
-                  Rēzeknes Augstskola, 145-158.
+                  Rēzeknes Augstskola, 145-158. [Conference Proceedings Citation
+                  Index (Web of Science)].
                 </a>
               </li>
               <br />
