@@ -204,6 +204,18 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 ></Image>
               </div>
               <div className="column">
+                <a href="/material/cvs/on.pdf">
+                  <h2>Odeta Norkutė</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/on.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
+              </div>
+              <div className="column">
                 <h2>Judita Kasperiūnienė</h2>
               </div>
               <div className="column">
@@ -211,9 +223,6 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </div>
               <div className="column">
                 <h2>Eglė Gerulaitienė</h2>
-              </div>
-              <div className="column">
-                <h2>Odeta Norkutė</h2>
               </div>
               <div className="column">
                 <h2>Genovaitė Kynė</h2>
@@ -455,6 +464,226 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   metodikų išbandymas su min. <b>350 dalyviais</b>.
                 </li>
               </ul>
+            </div>
+            <h2>Konferencijos</h2>
+            <div>
+              <p>
+                Siekiant moksliškai pagrįsti naują edukacinį ir mokslo
+                komunikacijos maršrutą, atlikta{" "}
+                <b>
+                  atominio/ branduolinio turizmo, industrinio paveldo objektų ir
+                  maršrutų edukacinio potencialo analizė ir šie rezultatai
+                  pristatyti tarptautinės mokslinėse konferencijose
+                </b>
+                :
+              </p>
+              <ol>
+                <li>
+                  Perskaitytas pranešimas tarptautinėje mokslinėje
+                  konferencijoje SIE2018 Society. Integration. Education
+                  vykusioje Rėzegnėje, Latvijoje 2018 m. gegužės 25-26 d.
+                  Natalijos Mažeikienės ir Eglės Gerulaitienės
+                  &quot;COMMODIFICATION OF CULTURAL IDENTITIES AND/OR
+                  EMPOWERMENT OF LOCAL COMMUNITIES: DEVELOPING A ROUTE OF
+                  NUCLEAR TOURISM&quot;.
+                </li>
+                <br />
+                <li>
+                  Perskaitytas pranešimas tarptautinėje mokslinėje
+                  konferencijoje SIE2018 Society. Integration. Education
+                  vykusioje Rėzegnėje, Latvijoje 2018 m. gegužės 25-26 d. Odetos
+                  Norkutės &quot;COMMON FACETS OF MUSEUM VIRTUAL
+                  SELF-PRESENTATION: EXPERIMENTING WITH INTERACTIVE IMAGE AND
+                  TEXT&quot;.
+                </li>
+                <br />
+                <li>
+                  Perskaitytas pranešimas EDULEARN 2018 konferencijoje
+                  Ispanijoje nuotoliniu būdu 2018 m. Liepos 4-6 d. N.
+                  Mazeikiene, O. Norkute, I. Tandzegolskiene skaitė pranešimą
+                  &quot;Looking for Edutainment at Lithuanian Science
+                  Museums&quot;.
+                </li>
+                <br />
+                <li>
+                  Perskaitytas pranešimas EDULEARN 2018 konferencijoje
+                  Ispanijoje nuotoliniu būdu 2018 m. Liepos 4-6 d.N. Mazeikiene,
+                  E. Gerulaitienė skaitė pranešimą &quot;Educational Aspects of
+                  Nuclear Tourism: Sites, Objects and Museums&quot;.
+                </li>
+                <br />
+                <li>
+                  Pranešimas perskaitytas tarptautinėje mokslinėje
+                  konferencijoje Vroclave, Lenkijoje, International
+                  Communication in the Network Society, kuri vyko 2018 m. Spalio
+                  11-12 d. Mažeikienė, Dovydaitytė, Juraitė skaitė pranešimą
+                  &quot;Transforming city identity: from the Soviet industrial
+                  (nuclear) center to the European multicultural city&quot;.
+                </li>
+                <br />
+                <li>
+                  Pranešimas perskaitytas tarptautinėje mokslinėje
+                  konferencijoje Vroclave, Lenkijoje, International
+                  Communication in the Network Society, kuri vyko 2018 m. Spalio
+                  11-12 d. Gerulaitienė, Mažeikienė pristatė pranešimą
+                  &quot;AUTHENTICITY AND PERFORMANCE OF CULTURAL IDENTITIES IN
+                  TOURISM&quot;.
+                </li>
+                <br />
+                <li>
+                  Pranešimas perskaitytas tarptautinėje mokslinėje
+                  konferencijoje Vroclave, Lenkijoje, International
+                  Communication in the Network Society, kuri vyko 2018 m. Spalio
+                  11-12 d. Kasperiūnienė ir Mažeikienė skaitė pranešimą
+                  &quot;Nuclear media discourses after the closure of the
+                  Ignalina Nuclear Power Plant: is the game over?&quot;.
+                </li>
+                <br />
+                <li>
+                  Ineta Dabašinskienė skaitė pranešimą Stanforde
+                  &quot;Conflicting vs. harmonious multilingualism: the case of
+                  language development of children in Lithuania&quot; (2018 m.
+                  Liepos 1-3 d., vyko ne iš projekto lėšų).
+                </li>
+                <br />
+                <li>
+                  Ineta Dabašinskienė, Natalija Mažeikienė skaitė pranešimą
+                  Bostone, JAV &quot;Performance of authentic cultural
+                  identities at stake: between dominant discourses and theatre
+                  performances&quot; 2018 m. Gruodžio 6 - 9, ( į konferenciją
+                  buvo vykstama ne iš projekto lėšų).
+                </li>
+                <br />
+                <li>
+                  Linara Dovydaitytė dalyvavo tarptautinėje konferencijoje
+                  Švedijoje HOW TO REMEMBER, HOW TO FORGET? Ir skaitė pranešimą
+                  &quot;Post-Soviet Museum Practices around the Baltic Sea ir
+                  skaitė pranešimą tema Representations of the contested past:
+                  museums and communities in the shaping of post-soviet
+                  memory&quot; (vyko ne iš projekto lėšų).
+                </li>
+                <br />
+                <li>
+                  Kristina Juraitė skaitė pranešimą 13th Conference on Baltic
+                  Studies in Europe 2019: Baltic Solidarity, Gdanske, Lenkijoje.
+                  Regenerating Cultural Identity and Rebranding of
+                  Post-Industrial City: The Case of Visaginas.
+                </li>
+                <br />
+                <li>
+                  Ineta Dabašinskienė skaitytė pranešimą 13th Conference on
+                  Baltic Studies in Europe 2019: Baltic Solidarity, Gdanske,
+                  Lenkijoje. Tensions between Language Policies and Practices:
+                  Case study of Visaginas (Lithuania).
+                </li>
+                <br />
+                <li>
+                  Linara Dovydaitytė skaitytė pranešimą 13th Conference on
+                  Baltic Studies in Europe 2019: Baltic Solidarity, Gdanske,
+                  Lenkijoje. Narrating History of Labour and Industry in
+                  Post-Soviet Museums.
+                </li>
+                <br />
+                <li>
+                  Lietuvoje vyksiančioje mokslinėje konferencijoje: 8-ojoje
+                  tarptautinėje tarpdisciplininėje mokslinėje konferencijoje
+                  REGIONAS:ISTORIJA,KULTŪRA,KALBA. Pranešimo tema: Visagino
+                  miestas ir Ignalinos atominė elektrinė: energetinis
+                  žiniasklaidos diskursas , 2019 m. kovo 28–29d. Šiauliai.
+                  Pranešimo bendradautoriai: Prof. Dr. Natalija Mažeikienė; Doc.
+                  dr. Ilona Tandzegolskienė, Dr. Judita Kasperiūnienė.
+                </li>
+                <br />
+                <li>
+                  Judita Kasperiūnienė ir Ilona Tandzegolskienė dalyvavo
+                  International Applied Research Conference Information
+                  Technologies 2019 (2019-05-09): Theory, Practice, Innovations,
+                  Alytaus kolegijoje ir pristatė pranešimą tema: &quot;Methods
+                  and Techniques of Virtual tours for Heritage
+                  Reconstruction&quot;.
+                </li>
+                <br />
+                <li>
+                  Natalija Mažeikienė ir Odeta Norkutė skaitė pranešimą IARTEM
+                  tarptautinėje mokslinėje konferencijoje, Danijoje, Odense 2019
+                  09 11-13: Teaching about nuclear energy in geography
+                  curriculum: moving from energy literacy to nuclear imaginary.
+                </li>
+                <br />
+                <li>
+                  Ilona Tandzegolskienė skaitė pranešimą Hamburge vykstančioje
+                  tarptautinėje mokslinėje konferencijoje ECER European
+                  Educational Research Association, Rugsėjo 2-6 d. &quot;The
+                  educational role of the Science museums: objects and
+                  Stories&quot;.
+                </li>
+                <br />
+                <li>
+                  Ilona Tandzegolskienė dalyvavo Vilniaus universiteto
+                  organizuojamoje konferencijoje The 4th International
+                  Scientific Conference EDUCATION POLICY IN CULTURAL CONTEXTS:
+                  TRANSMISSION AND/OR TRANSFORMATION, November 7-8, 2019 ir
+                  skaitė pranešimą tema: &quot;Naujos mokymosi formos ir
+                  galimybės industrinio paveldo kontekste&quot;.
+                </li>
+                <br />
+                <li>
+                  Linara Dovydaitytė vyko į Milaną, vykstančią tarptautinę
+                  mokslinę konferenciją Society for the History of Technology
+                  (SHOT) Annual Meeting, Milan, Spalio 24-27 d., 2019 m. ir
+                  skaitė pranešimą &quot;Atomic Heritage: Assembling Atomic
+                  Cultures, Communities and Knowledge&quot;.
+                </li>
+                <br />
+                <li>
+                  Judita Kasperiūnienė ir Ilona Tandzegolskienė dalyvavo
+                  tarptautinėje mokslinėje konferencijoje UGDYMO IR ŠVIETIMO
+                  ATEITIES IDĖJOS III - oji Lietuvos edukacinių tyrimų
+                  asociacijos (LETA) konferencija Lietuvoje, 2019 m.. spalio
+                  11-12 d. ir skaitė pranešimą tema: &quot;Industrinio paveldo
+                  objektų transformacijos perteikimo metodai ir virtualaus
+                  mokomojo maršruto pristatymo būdai&quot;.
+                </li>
+                <br />
+                <li>
+                  Ineta Dabašinkienė dalyvavo 26-ojoje tarptautinėje mokslinėje
+                  Jono Jablonskio konferencijoje 2019 m. spalio 3-4 d. ir skaitė
+                  pranešimą: LINGUISTIC IDENTITIES AND ATTITUDES: CASE STUDY OF
+                  VISAGINAS MULTIETHNIC COMMUNITY.
+                </li>
+                <br />
+                <li>
+                  Linara Dovydaitytė sudalyvavo nuotolinėje mokslinėje
+                  konferencijoje Nuclear Cultural Heritage: From Knowledge to
+                  Practice, 12 May 2020. Ir skaitė pranešimą tema: &quot;Shaping
+                  atomic tourism in Lithuania&quot; (Linara Dovydaityte,
+                  Vytautas Magnus University).
+                </li>
+                <br />
+                <li>
+                  Natalija Mažeikienė, Odeta Norkutė, Genovaitė Kynė sudalyvavo
+                  geografų kongrese ir skaitė pranešimą tema: Energetinis
+                  raštingumas geografijos ugdymo turinyje: Atominė energetika ir
+                  energetikos kraštovaizdžio kaita GEOGRAFIJOS MOKSLAS: TYRIMAI.
+                  GAMTOS IR VISUOMENĖS GEROVEI. IV LIETUVOS GEOGRAFŲ KONGRESAS.
+                  Vilnius, 2020 m. spalio 23 d.
+                </li>
+                <br />
+                <li>
+                  Judita Kasperiūnienė dalyvavo online mokslinėje konferencijoje
+                  ECS2020 Lenkijoje 11-13 September 2020, Vroclavo
+                  univeristetas, Poland, pranešimas &quot;Smart learning
+                  environments in a contemporary museum: a case study&quot;.
+                </li>
+                <br />
+                <li>
+                  Natalija Mažeikienė dalyvavo online mokslinėje konferencijoje
+                  ECS2020 Lenkijoje 11-13 September 2020, Vroclavo
+                  univeristetas, Poland, pranešimas &quot;Toward a new energy
+                  paradigm in geography: Revisiting the curriculum and teaching
+                  practices&quot;.
+                </li>
+              </ol>
             </div>
           </div>
           <div className="section" id="contact">
