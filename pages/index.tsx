@@ -217,24 +217,77 @@ const MainPage: React.FC<Props> = (props: Props) => {
               </div>
               <div className="column">
                 <h2>Judita Kasperiūnienė</h2>
+                <Image
+                  className="c-img"
+                  src="/images/team/jk.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
-                <h2>Andrei Stsiapanau</h2>
+                <a href="/material/cvs/as.pdf">
+                  <h2>Andrei Stsiapanau</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/as.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
+              </div>
+              <div className="column">
+                <a href="/material/cvs/gk.pdf">
+                  <h2>Genovaitė Kynė</h2>
+                </a>
+                <Image
+                  className="c-img"
+                  src="/images/team/kg.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <h2>Eglė Gerulaitienė</h2>
-              </div>
-              <div className="column">
-                <h2>Genovaitė Kynė</h2>
+                <Image
+                  className="c-img"
+                  src="/images/team/eg.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <h2>Kristina Juraitė</h2>
+                <Image
+                  className="c-img"
+                  src="/images/team/kj.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <h2>Ina Žurkuvienė</h2>
+                <Image
+                  className="c-img"
+                  src="/images/team/iz.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
               <div className="column">
                 <h2>Vida Montvydaitė</h2>
+                <Image
+                  className="c-img"
+                  src="/images/team/vm.jpg"
+                  width={800}
+                  height={600}
+                  objectFit="contain"
+                ></Image>
               </div>
             </div>
           </div>
@@ -655,7 +708,7 @@ export default MainPage;
 export const getServerSideProps: GetServerSideProps = async () => {
   const pub = await fetch(`${env.DOMAIN}/api/feed`);
   const posts: PostJson[] = await pub.json();
-  
+
   return {
     props: {
       posts: posts.length > 2 ? posts.slice(0, 2) : posts,
