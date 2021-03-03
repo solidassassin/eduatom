@@ -243,7 +243,7 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 </a>
                 <Image
                   className="c-img"
-                  src="/images/team/kg.jpg"
+                  src="/images/team/gk.jpg"
                   width={800}
                   height={600}
                   objectFit="contain"
