@@ -18,6 +18,7 @@ const Editor = dynamic(() => import("components/Editorjs"), {
 
 type Props = {
   posts: PostJson[];
+  readMore: boolean;
 };
 
 const MainPage: React.FC<Props> = (props: Props) => {
@@ -82,9 +83,13 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 );
               })}
               <p className="flow">
-                <a className="read-more" href="/news">
-                  Skaityti daugiau
-                </a>
+                {props.readMore ? (
+                  <a className="read-more" href="/news">
+                    Skaityti daugiau
+                  </a>
+                ) : (
+                  <a />
+                )}
               </p>
             </div>
           </div>
@@ -707,11 +712,18 @@ export default MainPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const pub = await fetch(`${env.DOMAIN}/api/feed`);
-  const posts: PostJson[] = await pub.json();
+  let posts: PostJson[] = await pub.json();
+  let readMore = false;
+
+  if (posts.length > 2) {
+    posts = posts.slice(0, 2);
+    readMore = true;
+  }
 
   return {
     props: {
-      posts: posts.length > 2 ? posts.slice(0, 2) : posts,
+      posts,
+      readMore,
     },
   };
 };
