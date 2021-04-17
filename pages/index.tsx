@@ -96,7 +96,13 @@ const MainPage: React.FC<Props> = (props: Props) => {
           <div className="section" id="project">
             <h1>Projektas</h1>
             <p className="text-post">
-              <b>Mokslinis EDUATOM projektas</b> skirtas sukurti edukacinio ir
+              <b>
+                Ignalinos atominės elektrinės (IAE) regiono branduolinio
+                edukacinio turizmo plėtojimo didaktinės technologijos
+              </b>{" "}
+              (EDUATOM)
+              <i>Nr. 01.2.2-LMT-K-718-01-0084/232</i> tai{" "}
+              <b>mokslinis projektas</b> skirtas sukurti edukacinio ir
               pažintinio turizmo plėtros didaktinius sprendimus Lietuvos
               muziejams, turizmo paslaugų plėtotojams, švietimo ir ugdymo
               institucijoms, kurios vykdo neformalųjį ir formalųjį ugdymą,
