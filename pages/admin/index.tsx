@@ -8,18 +8,19 @@ import type { Session } from "next-auth/client";
 import type { PostJson } from "utils/prop-types";
 
 type Props = {
+  domain: string;
   drafts: PostJson[];
   published: PostJson[];
   session: Session;
 };
 
-async function alterPost(id: number, method: "PUT" | "DELETE") {
-  await fetch(`${env.DOMAIN}/api/post/${id}`, {
+async function alterPost(id: number, method: "PUT" | "DELETE", domain: string) {
+  await fetch(`${domain}/api/post/${id}`, {
     method,
   });
 }
 
-function displayPost(post: PostJson) {
+function displayPost(post: PostJson, domain: string) {
   return (
     <div className="title-box">
       <a className="post-title" href={`admin/post/${post.id}`}>
@@ -28,7 +29,7 @@ function displayPost(post: PostJson) {
       <a
         className="delete"
         href=""
-        onClick={() => alterPost(post.id, "DELETE")}
+        onClick={() => alterPost(post.id, "DELETE", domain)}
       >
         Pašalinti
       </a>
@@ -59,11 +60,11 @@ const AdminPage: React.FC<Props> = (props: Props) => {
       <div>
         <div className="acolumn">
           <h1 className="h1a">Juodraščiai</h1>
-          {props.drafts.map((post) => displayPost(post))}
+          {props.drafts.map((post) => displayPost(post, props.domain))}
         </div>
         <div className="acolumn">
           <h1 className="h1a">Naujienos</h1>
-          {props.published.map((post) => displayPost(post))}
+          {props.published.map((post) => displayPost(post, props.domain))}
         </div>
       </div>
     </div>
@@ -78,9 +79,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context);
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
+  const domain = env.DOMAIN;
 
-  const pub = await fetch(`${env.DOMAIN}/api/feed`);
-  const dra = await fetch(`${env.DOMAIN}/api/drafts`, {
+  const pub = await fetch(`${domain}/api/feed`);
+  const dra = await fetch(`${domain}/api/drafts`, {
     headers,
   });
 
@@ -89,6 +91,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   return {
     props: {
+      domain,
       drafts,
       published,
       session,
