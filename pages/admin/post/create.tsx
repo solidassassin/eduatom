@@ -12,11 +12,12 @@ const Editor = dynamic(() => import("components/Editorjs"), {
 });
 
 type Props = {
+  domain: string;
   session: Session;
 };
 
-async function createPost(title: string, content: string) {
-  await fetch(`${env.DOMAIN}/api/post`, {
+async function createPost(title: string, content: string, domain: string) {
+  await fetch(`${domain}/api/post`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content }),
@@ -45,7 +46,7 @@ const PostEditor: React.FC<Props> = (props: Props) => {
         className="new-post"
         onClick={() => {
           if (title && content) {
-            createPost(title, JSON.stringify(content));
+            createPost(title, JSON.stringify(content), props.domain);
             Router.push("/admin");
           } else {
             alert("Nėra medžiagos");
@@ -65,6 +66,7 @@ export default PostEditor;
 export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
+      domain: env.DOMAIN,
       session: await getSession(context),
     },
   };

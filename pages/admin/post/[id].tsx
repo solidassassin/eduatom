@@ -13,12 +13,18 @@ const Editor = dynamic(() => import("components/Editorjs"), {
 });
 
 type Props = {
+  domain: string;
   post: PostJson;
   session: Session;
 };
 
-async function editPost(id: number, title: string, content: string) {
-  await fetch(`${env.DOMAIN}/api/post/${id}`, {
+async function editPost(
+  id: number,
+  title: string,
+  content: string,
+  domain: string
+) {
+  await fetch(`${domain}/api/post/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content }),
@@ -54,7 +60,12 @@ const PostEditor: React.FC<Props> = (props: Props) => {
         className="new-post"
         onClick={() => {
           if (title && content) {
-            editPost(props.post.id, title, JSON.stringify(content));
+            editPost(
+              props.post.id,
+              title,
+              JSON.stringify(content),
+              props.domain
+            );
           } else {
             alert("Pakeitimų nėra");
           }
@@ -87,17 +98,16 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession(context);
   const cookie = context.req?.headers.cookie;
   const headers = cookie ? { cookie } : undefined;
+  const domain = env.DOMAIN;
 
-  const postResponse = await fetch(
-    `${env.DOMAIN}/api/post/${context.params?.id}`,
-    {
-      headers,
-    }
-  );
+  const postResponse = await fetch(`${domain}/api/post/${context.params?.id}`, {
+    headers,
+  });
   const post = await postResponse.json();
 
   return {
     props: {
+      domain,
       post,
       session,
     },
