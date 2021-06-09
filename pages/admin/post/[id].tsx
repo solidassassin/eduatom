@@ -31,8 +31,8 @@ async function editPost(
   });
 }
 
-async function publishPost(id: number) {
-  await fetch(`${env.DOMAIN}/api/publish/${id}`, {
+async function publishPost(id: number, domain: string) {
+  await fetch(`${domain}/api/publish/${id}`, {
     method: "PUT",
   });
 }
@@ -80,7 +80,7 @@ const PostEditor: React.FC<Props> = (props: Props) => {
           className="new-post"
           href="/admin"
           onClick={() => {
-            publishPost(props.post.id);
+            publishPost(props.post.id, props.domain);
           }}
         >
           Publikuoti
