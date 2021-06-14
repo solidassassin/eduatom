@@ -114,9 +114,12 @@ const MainPage: React.FC<Props> = (props: Props) => {
               atominės elektrinės regiono edukacinio branduolinio/atominio
               maršruto kūrimo pavyzdžiu. Siekiama sukurti mokslinės
               eksperimentinės plėtros (MTEP) produktą –{" "}
-              <b>virtualų edukacinį maršrutą</b>, kuris atitiktų branduolinio/
-              atominio turizmo, atominių muziejų, informacinių centrų ir
-              edukacinių mokslo centrų plėtros tendencijas.
+              <a href="https://atominisvisaginas.lt/">
+                <b>virtualų edukacinį maršrutą</b>
+              </a>
+              , kuris atitiktų branduolinio/ atominio turizmo, atominių muziejų,
+              informacinių centrų ir edukacinių mokslo centrų plėtros
+              tendencijas.
             </p>
             <p>
               Kuriant maršrutą taikomi inovatyvūs edukaciniai ir didaktiniai
@@ -322,13 +325,15 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 .
               </li>
               <li>
-                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
-                leidykloje).{" "}
-                <i>
-                  Learning the Nuclear: Educational Tourism in (Post)Industrial
-                  Sites,
-                </i>{" "}
-                Peter Lang Publishing.
+                <a href="https://www.peterlang.com/view/title/73740?rskey=DcxBvX&result=1">
+                  [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
+                  leidykloje).{" "}
+                  <i>
+                    Learning the Nuclear: Educational Tourism in
+                    (Post)Industrial Sites,
+                  </i>{" "}
+                  Peter Lang Publishing.
+                </a>
               </li>
               <li>
                 Dovydaitytė, L. (2021, priimta spaudai). (Re)Imagining the
@@ -426,6 +431,14 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   5692-5702. [Conference Proceedings Citation Index- Social
                   Science & Humanities (Web of Science)]
                 </a>
+              </li>
+              <li>
+                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021, rengiama).
+                <i>
+                  Reframing Culture and Science Communication: An Educational
+                  Approach
+                </i>
+                , Peter Lang Publishing
               </li>
             </ol>
             <h2>Tyrimas</h2>
