@@ -310,10 +310,13 @@ const MainPage: React.FC<Props> = (props: Props) => {
             <h2>Mokslo publikacijos</h2>
             <ol id="members">
               <li>
-                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,{" "}
-                <i>rengiama</i>).
-                <i>Innovations in Science and Culture Commmunication</i>, Peter
-                Lang Publishing.
+                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
+                leidykloje).
+                <i>
+                  Reframing Culture and Science Communication: An Educational
+                  Approach
+                </i>
+                , Peter Lang Publishing
               </li>
               <li>
                 [Kolektyvinė monografija] N. Mažeikienė (Sud.) (2021,{" "}
@@ -431,14 +434,6 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   5692-5702. [Conference Proceedings Citation Index- Social
                   Science & Humanities (Web of Science)]
                 </a>
-              </li>
-              <li>
-                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021, rengiama).
-                <i>
-                  Reframing Culture and Science Communication: An Educational
-                  Approach
-                </i>
-                , Peter Lang Publishing
               </li>
             </ol>
             <h2>Tyrimas</h2>
