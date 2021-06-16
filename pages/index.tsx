@@ -7,6 +7,7 @@ import {
   Slide,
   Image as Cimg,
 } from "pure-react-carousel";
+import Head from "next/head";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import type { PostJson } from "utils/prop-types";
@@ -24,6 +25,9 @@ type Props = {
 const MainPage: React.FC<Props> = (props: Props) => {
   return (
     <div>
+      <Head>
+        <title>Eduatom</title>
+      </Head>
       <div className="page">
         <CarouselProvider
           naturalSlideWidth={1920}
