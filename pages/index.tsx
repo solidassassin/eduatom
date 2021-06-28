@@ -314,8 +314,17 @@ const MainPage: React.FC<Props> = (props: Props) => {
             <h2>Mokslo publikacijos</h2>
             <ol id="members">
               <li>
-                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
-                leidykloje).
+                <a href="https://www.peterlang.com/view/title/73740?rskey=DcxBvX&result=1">
+                  [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021).{" "}
+                  <i>
+                    Learning the Nuclear: Educational Tourism in
+                    (Post)Industrial Sites,
+                  </i>{" "}
+                  Peter Lang Publishing.
+                </a>
+              </li>
+              <li>
+                [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021, rengiama).
                 <i>
                   Reframing Culture and Science Communication: An Educational
                   Approach
@@ -330,17 +339,6 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   ribų
                 </i>
                 .
-              </li>
-              <li>
-                <a href="https://www.peterlang.com/view/title/73740?rskey=DcxBvX&result=1">
-                  [Kolektyvinė monografija] N. Mažeikienė (ed.) (2021,
-                  leidykloje).{" "}
-                  <i>
-                    Learning the Nuclear: Educational Tourism in
-                    (Post)Industrial Sites,
-                  </i>{" "}
-                  Peter Lang Publishing.
-                </a>
               </li>
               <li>
                 Dovydaitytė, L. (2021, priimta spaudai). (Re)Imagining the
@@ -381,11 +379,12 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 </a>
               </li>
               <li>
-                Mažeikienė, N., and Norkutė, O. (priimta spaudai, 2021). Toward
-                a new energy paradigm in geography: revisiting the curriculum
-                and teaching practices,{" "}
-                <i>Journal of Education Culture and Society,</i> ISSN2081-1640
-                [Web of Science]
+                <a href="/material/content/new-energy-paradigm.pdf">
+                  Mažeikienė, N., and Norkutė, O. (2021). Toward a new energy
+                  paradigm in geography: revisiting the curriculum and teaching
+                  practices, <i>Journal of Education Culture and Society,</i>{" "}
+                  ISSN2081-1640 [Web of Science]
+                </a>
               </li>
               <li>
                 <a href="/material/content/commodification-7.pdf">
@@ -416,7 +415,7 @@ const MainPage: React.FC<Props> = (props: Props) => {
                 </a>
               </li>
               <li>
-                <a href="/material/content/">
+                <a href="/material/content/Common-facets-of-museum-virtual-self-presentation.pdf">
                   Kasperiūnienė, J. and Norkutė, O. (2018). Common facets of
                   museum virtual self - presentation: experimenting with
                   interactive image and text // Society, integration, education
@@ -438,6 +437,14 @@ const MainPage: React.FC<Props> = (props: Props) => {
                   5692-5702. [Conference Proceedings Citation Index- Social
                   Science & Humanities (Web of Science)]
                 </a>
+              </li>
+              <li>
+                Dabašinskienė, I. (2021, priimta).{" "}
+                <i>
+                  Understanding the post-Soviet nuclear locality through
+                  language policy orientations
+                </i>{" "}
+                Journal of Baltic Studies, ISSN 0162-9778
               </li>
             </ol>
             <h2>Tyrimas</h2>
