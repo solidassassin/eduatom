@@ -5,14 +5,14 @@ services:
       - db.env
     volumes:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
-    restart: on-failure
+    restart: always
   nextjs:
     build: ./
     env_file:
       - next.env
-    restart: on-failure
+    restart: always
   nginx:
     build: ./nginx
-    restart: on-failure
+    restart: always
     ports:
       - 80:80
