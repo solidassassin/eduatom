@@ -1,4 +1,5 @@
 networks:
+  internal: {}
   proxy:
     external: true
 
@@ -10,9 +11,12 @@ services:
     volumes:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
     restart: always
+    networks:
+      - internal
   nextjs:
     build: ./
     env_file:
       - next.env
     networks:
+      - internal
       - proxy
